@@ -52,7 +52,7 @@ html::-webkit-scrollbar-thumb {
   height: 100vh;
 }
 
-img {
+.leftSideImg {
   max-width: 90%;
   max-height: 100%;
   display: flex;
@@ -62,14 +62,55 @@ img {
 }
 
 .image-container {
-  /* width: 80%;
-    height: 80%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 80%;
+}
+
+.LogoBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.waysideLogo {
+  width: 200px;
+  margin-left: 24px;
+}
+
+.welcomeText {
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: var(--jet);
+}
+
+.readerOptionsBox {
+  display: flex;
+  align-items: center;
+}
+
+.readerOptions {
+  color: var(--sonicSilver);
+  font-size: 1.15rem;
+  line-height: 1.5rem;
+  margin-right: 16px;
+}
+
+.buttonsBox {
+  display: flex;
+  justify-content: center;
+}
+
+.launchButton {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--royalBlue);
+  color: var(--white);
+  font-size: 1.15rem;
+  cursor: pointer;
 }

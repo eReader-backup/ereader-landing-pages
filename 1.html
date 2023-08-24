@@ -25,30 +25,33 @@
 
     <div class="left col-md-6">
         <div class="image-container">
-            <img src="images/launchPage.png"/>
+            <img class="leftSideImg" src="images/launchPage.png"/>
         </div>
     </div>
 
     <div class="right col-md-6 d-flex flex-column justify-content-center p-5">
-        <h2 class="welcome mb-3">Welcome!</h2>
+        <div class="LogoBox">
+            <img class="waysideLogo" src="images/waysideLogo.svg" />
+        </div>
+        <h2 class="welcome mb-3 welcomeText">Welcome!</h2>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text">Enter your name</span>
             </div>
             <input type="text" class="form-control" id="name" name="name">
         </div>
-        <div class="d-block mb-3">
+        <div class="mb-3 readerOptionsBox">
             <div class="custom-control custom-radio custom-control-inline">
                 <input type="radio" id="fixed" name="format" class="custom-control-input" value="fixed">
-                <label class="custom-control-label" for="fixed">Fixed</label>
+                <label class="custom-control-label readerOptions" for="fixed">Fixed</label>
             </div>
             <div class="custom-control custom-radio custom-control-inline">
                 <input type="radio" id="reflowable" name="format" class="custom-control-input" value="reflowable">
-                <label class="custom-control-label" for="reflowable">Reflowable</label>
+                <label class="custom-control-label readerOptions" for="reflowable">Reflowable</label>
             </div>
         </div>
-        <div>
-            <button class="btn btn-primary">Launch</button>
+        <div class="buttonsBox">
+            <button class="btn launchButton">Launch</button>
         </div>
     </div>
 
