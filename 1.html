@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .left {
+            background-color: blue;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container {
+            width: 80%;
+            height: 80%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body class="d-flex">
+
+    <div class="left col-md-6">
+        <div class="image-container">
+            <!-- Replace the text "Your Image Here" with an <img> tag to your image if you have one -->
+            <p>Your Image Here</p>
+        </div>
+    </div>
+
+    <div class="right col-md-6 d-flex flex-column justify-content-center p-5">
+        <h2 class="welcome mb-3">Welcome!</h2>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Enter your name</span>
+            </div>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="d-block mb-3">
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="fixed" name="format" class="custom-control-input" value="fixed">
+                <label class="custom-control-label" for="fixed">Fixed</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="reflowable" name="format" class="custom-control-input" value="reflowable">
+                <label class="custom-control-label" for="reflowable">Reflowable</label>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-primary">Launch</button>
+        </div>
+    </div>
+
+    <!-- Optional: Include Bootstrap JS and Popper.js for dropdowns, modals, tooltips, etc. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
