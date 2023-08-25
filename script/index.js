@@ -6,32 +6,36 @@ var username = "";
 // });
 
 function flipbookClick() {
-    let name = username.trim();
-    if (name !== "" && name !== undefined) {
-        let url = "https://wayside-reader1.comprodls.com/demo/student-edition/interkulturel_1_vtext?username=" + name;
-        window.open(url, "_blank");
-    } else {
-        username = "";
-        alert("Enter your name to launch the Reader.")
-    }
+    let url = "https://wayside-reader1.comprodls.com/demo/student-edition/interkulturel_1_vtext";
+    window.open(url, "_blank");
+
+    // let name = username.trim();
+    // if (name !== "" && name !== undefined) {
+    //     let url = "https://wayside-reader1.comprodls.com/demo/student-edition/interkulturel_1_vtext?username=" + name;
+    //     window.open(url, "_blank");
+    // } else {
+    //     username = "";
+    //     alert("Enter your name to launch the Reader.")
+    // }
 }
 
 function webbookClick() {
-    let name = username.trim();
-    if (name !== "" && name !== undefined) {
-        let url = "https://wayside-reader2.comprodls.com/demo/student-edition/interkulturel_1_vtext?username=" + name;
-        window.open(url, "_blank");
-    } else {
-        username = "";
-        alert("Enter your name to launch the Reader.")
-    }
+    let url = "https://wayside-reader2.comprodls.com/demo/student-edition/interkulturel_1_vtext";
+    window.open(url, "_blank");
+    // let name = username.trim();
+    // if (name !== "" && name !== undefined) {
+    //     let url = "https://wayside-reader2.comprodls.com/demo/student-edition/interkulturel_1_vtext?username=" + name;
+    //     window.open(url, "_blank");
+    // } else {
+    //     username = "";
+    //     alert("Enter your name to launch the Reader.")
+    // }
 }
 
 let lastSelectedDiv = document.getElementById("div1");
 let lastSelectedButton = document.getElementById("div1").querySelector("button");
 
 function handleDivClick(event) {
-    debugger
     if (lastSelectedDiv !== null) {
         lastSelectedDiv.classList.remove("selectedDiv");
     }
