@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The first thing in any HTML file should be the charset -->
+    <meta charset="utf-8" />
+    <!-- Make site non indexed and non searchable for crawlers -->
+    <meta name="robots" content="index, follow" />
+    <!-- Make the page mobile compatible -->
+    <meta
+      name="viewport"
+      id="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <!-- favicon, title and description -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <title>comproDLS Reader | Wayside Publishing Demo</title>
+    <meta name="description" content="comproDLS Reader | Wayside Publishing Demo" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body class="nanoScroll">
+    <header>
+      <div class="headerDiv">
+        <h1 class="headingFontColor">
+          <span class="welcomeText">Welcome to</span>
+          <br />
+          <span class="comproText">ComproDLS</span>
+          <span class="readerText">eReader</span>
+        </h1>
+        <div class="lineLogoBox">
+          <div class="verticalHR"></div>
+          <img class="waysideLogo" src="images/waysideLogo.svg" />
+        </div>
+      </div>
+    </header>
+    <hr />
+    <main>
+      <section>
+        <form class="usernameForm">
+          <label for="username" class="usernameLabel">Enter your name:</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            class="usernameInput"
+          />
+        </form>
+      </section>
+      <section>
+        <!-- <h2 class="sectionTitle">Fixed Layout</h2> -->
+        <div class="sectionContentBox">
+          <img src="images/book.png" alt="book" />
+          <div class="textButtonBox">
+            <div class="containerTextBox">
+              <h2 class="containerTitle">Fixed Layout Reader</h2>
+              <p class="containerContent">
+                Experience the future of Digital Reading and say goodbye to dull
+                and lifeless documents, as our reader brings the content to
+                life. It's intuitive and easy to navigate, works seamlessly
+                across all devices, and embeds multimedia elements like videos
+                and audios, making them more engaging and informative.
+              </p>
+              <!-- <p class="containerCaption"> Join us in revolutionizing the way we read and engage with digital content.</p> -->
+            </div>
+            <div class="buttonsBox">
+              <button class="launchButton" onclick="flipbookClick()">
+                Launch
+                <img
+                  class="rightArrow"
+                  width="18"
+                  height="18"
+                  src="images/rightArrow.png"
+                  alt="chevron-right"
+                />
+              </button>
+              <!-- <a class="releaseLink" href="#">Release Notes</a> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <!-- <h2 class="sectionTitle">Reflowable Layout</h2> -->
+        <div class="sectionContentBox">
+          <img src="images/e-book.png" alt="ebook" />
+          <div class="textButtonBox">
+            <div class="containerTextBox">
+              <h2 class="containerTitle">Reflowable Reader</h2>
+              <p class="containerContent">
+                Step into the next generation of digital reading and discovery!
+                Exhausted with conventional textbooks and static PDFs? Embark on
+                a journey with our innovative reader where information becomes a
+                vibrant, interactive experience.
+              </p>
+              <!-- <p class="containerCaption">Note: The already existing items shown in authoring tool are the
+                            same as
+                            used by the above jove
+                            lab i.e. Measuring Biodiversity.</p> -->
+            </div>
+            <div class="buttonsBox">
+              <button class="launchButton" onclick="webbookClick()">
+                Launch
+                <img
+                  class="rightArrow"
+                  width="18"
+                  height="18"
+                  src="images/rightArrow.png"
+                  alt="chevron-right"
+                />
+              </button>
+              <!-- <a class="releaseLink" href="#">Release Notes</a> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- includes js file -->
+    <script src="script/index.js"></script>
+  </body>
+</html>
+
+<!--
+5. send user name -->
