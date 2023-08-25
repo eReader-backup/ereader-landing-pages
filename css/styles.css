@@ -188,6 +188,7 @@ section {
   background-image: none;
   border-radius: 16px;
   cursor: pointer;
+  border: 2px solid white;
 }
 
 /* .sectionTitle {
@@ -237,7 +238,7 @@ section {
   margin-bottom: 24px;
 }
 
-.directLinkText{
+.directLinkText {
   font-size: 14px;
   line-height: 1.5;
   font-weight: 600;
@@ -300,7 +301,8 @@ a:visited {
 
 /*============================ selected css ============================*/
 .selectedDiv {
-  /* border: 2px solid red; */
+  border: 2px solid rgb(55, 48, 163);
+  box-shadow: 0 0 5px rgb(55, 48, 163);
 }
 
 /* ======================== media query css ======================= */
