@@ -13,8 +13,18 @@
   --scroll-bar-bg-color: #faf8f7;
 }
 
+@font-face {
+  font-family: "Inter Roman";
+  src: url("fonts/Inter-roman.var.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter var";
+  src: url("fonts/Inter-italic.var.woff2") format("woff2");
+}
+
 body {
-  font-family: Inter var,Roboto,Helvetica Neue,Arial,sans-serif;
+  font-family: 'Inter var', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   background: rgb(241, 245, 249);
   color: rgb(17, 24, 39);
 }
@@ -201,6 +211,11 @@ section {
   font-weight: 500;
   margin-top: 16px;
   color: rgb(107, 114, 128);
+}
+
+a, a:visited {
+  color: #3e75d6;
+  word-break: break-all;
 }
 
 /* .containerCaption {
