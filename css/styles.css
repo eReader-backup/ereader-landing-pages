@@ -259,10 +259,8 @@ a:visited {
 .launchButton {
   width: 100%;
   background-color: transparent;
-  outline: 0px;
   margin: 0px;
   cursor: pointer;
-  user-select: none;
   vertical-align: middle;
   appearance: none;
   text-decoration: none;
@@ -307,11 +305,9 @@ a:visited {
 
 .launchSelectedButton {
   width: 100%;
-  outline: 0px;
   border: 0px;
   margin: 0px;
   cursor: pointer;
-  user-select: none;
   vertical-align: middle;
   appearance: none;
   text-decoration: none;
