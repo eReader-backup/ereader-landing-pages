@@ -78,11 +78,16 @@ header {
 }
 
 .comproText {
-  font-size: 2.5rem;
+  font-size: 32px;
 }
 
 .comproText sup {
-  font-size: 1.5rem;
+  font-size: 18px;
+}
+
+.welcomeTitle sup {
+  font-size: 18px;
+  vertical-align: text-top;
 }
 
 .readerText {
@@ -102,7 +107,7 @@ header {
 }
 
 .waysideLogo {
-  width: 180px;
+  width: 130px;
   margin-left: 24px;
 }
 
@@ -141,7 +146,7 @@ main {
 }
 
 .welcomeTitle {
-  font-size: 48px;
+  font-size: 32px;
   letter-spacing: -0.025em;
   line-height: 1.25;
   font-weight: 800;
@@ -172,7 +177,7 @@ section {
 }
 
 .grid-item {
-  padding: 40px 32px;
+  padding: 32px 24px;
   background-color: rgb(255, 255, 255);
   color: rgb(17, 24, 39);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -197,7 +202,7 @@ section {
 } */
 
 .containerTitle {
-  font-size: 32px;
+  font-size: 24px;
   letter-spacing: -0.025em;
   line-height: 1.25;
   font-weight: 700;
