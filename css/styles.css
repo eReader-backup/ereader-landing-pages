@@ -15,7 +15,6 @@
 
 body {
   font-family: Inter var,Roboto,Helvetica Neue,Arial,sans-serif;
-  user-select: none;
   background: rgb(241, 245, 249);
   color: rgb(17, 24, 39);
 }
