@@ -27,7 +27,6 @@ body {
   font-family: "Inter var", "Roboto", "Helvetica Neue", Arial, sans-serif;
   background: rgb(241, 245, 249);
   color: rgb(17, 24, 39);
-  user-select: none;
 }
 
 * {
@@ -180,7 +179,9 @@ section {
 .grid-item {
   padding: 32px 24px;
   display: flex;
+  min-height: 350px;
   flex-direction: column;
+  border: 1px solid transparent;
   background-color: rgb(255, 255, 255);
   color: rgb(17, 24, 39);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -235,8 +236,7 @@ section {
 } */
 
 .directLinkBox {
-  margin-top: 40px;
-  margin-bottom: 24px;
+  margin-top: 12px;
 }
 
 .directLinkText {
@@ -257,9 +257,11 @@ a:visited {
 }
 
 .launchButton {
-  width: 100%;
+  margin: auto;
+  margin-top: 48px;
+  margin-bottom: 24px;
+  width: fit-content;
   background-color: transparent;
-  margin: 0px;
   cursor: pointer;
   vertical-align: middle;
   appearance: none;
@@ -277,7 +279,7 @@ a:visited {
   border: 1px solid currentcolor;
   color: inherit;
   text-transform: none;
-  border-radius: 28px;
+  border-radius: 8px;
 }
 
 .launchButton:hover {
@@ -299,33 +301,16 @@ a:visited {
 
 /*============================ selected css ============================*/
 .selectedDiv {
-  border: 2px solid rgb(55, 48, 163);
-  box-shadow: 0 0 5px rgb(55, 48, 163);
+  box-shadow: none;
+  border-color: rgb(55, 48, 163);
+  background-color: rgb(241, 247, 255);
 }
 
 .launchSelectedButton {
-  width: 100%;
-  border: 0px;
-  margin: 0px;
-  cursor: pointer;
-  vertical-align: middle;
-  appearance: none;
-  text-decoration: none;
-  font-family: "Inter var", "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 1.75;
-  min-width: 64px;
-  padding: 8px 22px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   color: rgb(255, 255, 255);
   background-color: rgb(79, 70, 229);
   text-transform: none;
   box-shadow: none;
-  border-radius: 28px;
 }
 
 .launchSelectedButton:hover {
