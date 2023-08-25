@@ -25,35 +25,49 @@
 
     <div class="left col-md-6">
         <div class="image-container">
-            <img class="leftSideImg" src="images/launchPage.png"/>
+            <img class="leftSideImg" src="images/launchPage.png" />
         </div>
     </div>
 
-    <div class="right col-md-6 d-flex flex-column justify-content-center p-5">
+    <section class="rightContainer col-md-6">
         <div class="LogoBox">
             <img class="waysideLogo" src="images/waysideLogo.svg" />
         </div>
-        <h2 class="welcome mb-3 welcomeText">Welcome!</h2>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Enter your name</span>
-            </div>
-            <input type="text" class="form-control" id="name" name="name">
+        <div class="welcomeBox">
+            <h1 class="welcomeTitle">Welcome!</h1>
+            <p class="welcomeSubtitle">Let's dive into a realm of interactive and immersive digital books where
+                knowledge comes to life with our Reader.</p>
         </div>
-        <div class="mb-3 readerOptionsBox">
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="fixed" name="format" class="custom-control-input" value="fixed">
-                <label class="custom-control-label readerOptions" for="fixed">Fixed</label>
+        <form>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Enter your name</span>
+                </div>
+                <input type="text" class="form-control" id="name" name="name">
             </div>
-            <div class="custom-control custom-radio custom-control-inline">
-                <input type="radio" id="reflowable" name="format" class="custom-control-input" value="reflowable">
-                <label class="custom-control-label readerOptions" for="reflowable">Reflowable</label>
+            <div class="mb-3 readerOptionsBox">
+                <p class="readerOptionsLabel">Choose your reading style:</p>
+                <div class="renderOptions">
+                    <div class="renderOption">
+                        <input type="radio" id="fixedReader" name="reader" value="fixedReader">
+                        <label class="readerOptionLabel" for="fixedReader">Fixed</label>
+                    </div>
+                    <div class="renderOption">
+                        <input type="radio" id="reflowableReader" name="reader" value="reflowableReader">
+                        <label class="readerOptionLabel" for="reflowableReader">Reflowable</label>
+                    </div>
+                </div>
             </div>
-        </div>
+        </form>
         <div class="buttonsBox">
-            <button class="btn launchButton">Launch</button>
+            <button class="btn launchButton">Launch
+                <img class="rightArrow" src="images/startup.png" alt="rocket" />
+            </button>
         </div>
-    </div>
+    </section>
+
+    <!-- includes js file -->
+    <script src="script/index.js"></script>
 
     <!-- Optional: Include Bootstrap JS and Popper.js for dropdowns, modals, tooltips, etc. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

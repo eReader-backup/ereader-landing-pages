@@ -4,14 +4,12 @@
   --md: 768px;
   --lg: 1024px;
   --white: #ffffff;
-  --milk: #fffef5;
-  --jet: #343434;
-  --sonicSilver: #747575;
-  --quartz: #4b4b4b;
+  --darkCharcoal: #333333;
+  --cssGray: #7f7a79;
   --steelBlue: #337ab7;
   --scroll-bar-color: #dedede;
   --scroll-bar-bg-color: #faf8f7;
-  --royalBlue: #3169cc;
+  --celticBlue: #3169cc;
 }
 
 body {
@@ -43,9 +41,9 @@ html::-webkit-scrollbar-thumb {
   border: 4px solid var(--scroll-bar-color);
 }
 
-/* ========================= page css ==========================*/
+/* ========================= left side container css ==========================*/
 .left {
-  background-color: var(--royalBlue);
+  background-color: var(--celticBlue);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,49 +66,124 @@ html::-webkit-scrollbar-thumb {
   max-width: 80%;
 }
 
+/* ========================= right side container css ==========================*/
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  padding-top: 100px;
+}
+
 .LogoBox {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 32px;
 }
 
 .waysideLogo {
-  width: 200px;
-  margin-left: 24px;
+  width: 180px;
 }
 
-.welcomeText {
-  font-size: 1.8rem;
+.welcomeBox {
+  margin: 32px auto 16px auto;
+  text-align: center;
+}
+
+.welcomeTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--darkCharcoal);
+}
+
+.welcomeSubtitle {
+  font-size: 1rem;
   font-weight: normal;
-  color: var(--jet);
+  color: var(--cssGray);
 }
 
-.readerOptionsBox {
+/* .readerOptionsBox {
+} */
+
+.readerOptionsLabel {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--darkCharcoal);
+  margin-bottom: 8px;
+}
+
+.renderOptions{
   display: flex;
   align-items: center;
 }
 
-.readerOptions {
-  color: var(--sonicSilver);
-  font-size: 1.15rem;
+.renderOption{
+  display: flex;
+  align-items: center;
+}
+
+.readerOptionLabel {
+  color: var(--cssGray);
+  font-size: 1rem;
   line-height: 1.5rem;
   margin-right: 16px;
+  margin-left: 8px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline: none;
+  border: 3px solid gray;
+}
+
+input[type="radio"]:before {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 60%;
+  margin: 20% auto;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked:before {
+  background: var(--celticBlue);
+}
+
+input[type="radio"]:checked {
+  border-color: var(--celticBlue);
 }
 
 .buttonsBox {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .launchButton {
+  width: inherit;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 8px 12px;
   border: none;
   border-radius: 4px;
-  background-color: var(--royalBlue);
+  background-color: var(--celticBlue);
   color: var(--white);
   font-size: 1.15rem;
   cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.launchButton:hover {
+  background-color: #1d4a88;
+  color: var(--white);
+}
+
+.rightArrow {
+  margin-left: 8px;
+  width: 24px;
+  height: 24px;
 }
