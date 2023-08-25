@@ -53,8 +53,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1000px;
-  margin: auto;
+  margin-left: 32px;
+  margin-right: 32px;
 }
 
 .headingFontColor {
@@ -88,6 +88,7 @@ header {
 .verticalHR {
   border-left: 2px solid var(--sonicSilver);
   height: 72px;
+  display: none;
 }
 
 .waysideLogo {
