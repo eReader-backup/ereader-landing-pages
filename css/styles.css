@@ -16,6 +16,7 @@
 body {
   font-family: Arial, sans-serif;
   user-select: none;
+  background: rgb(241, 245, 249);
 }
 
 * {
@@ -23,7 +24,7 @@ body {
   padding: 0px;
 }
 
-html{
+html {
   scrollbar-width: thin !important;
   scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-bg-color) !important;
 }
@@ -44,16 +45,16 @@ html::-webkit-scrollbar-thumb {
 
 /* ======================== header css ======================= */
 header {
-  background-color: var(--milk);
-  padding: 36px 32px 36px 32px;
+  padding: 8px;
+  background-color: rgb(255, 255, 255);
 }
 
 .headerDiv {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1000px;
-  margin: auto;
+  margin-left: 32px;
+  margin-right: 32px;
 }
 
 .headingFontColor {
@@ -61,13 +62,17 @@ header {
 }
 
 .welcomeText {
-  font-size: 1.8rem;
+  font-size: 1.25rem;
   font-weight: normal;
   color: var(--sonicSilver);
 }
 
 .comproText {
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+
+.comproText sup {
+  font-size: 1.5rem;
 }
 
 .readerText {
@@ -82,11 +87,12 @@ header {
 
 .verticalHR {
   border-left: 2px solid var(--sonicSilver);
-  height: 90px;
+  height: 72px;
+  display: none;
 }
 
 .waysideLogo {
-  width: 200px;
+  width: 180px;
   margin-left: 24px;
 }
 
@@ -114,12 +120,30 @@ header {
 
 /* ======================== content css ======================= */
 main {
-  padding: 32px;
+  padding: 24px 0px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 section {
   max-width: 1000px;
   margin: 0 auto 32px auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  column-gap: 32px;
+}
+.grid-item {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(17, 24, 39);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+  background-image: none;
+  border-radius: 16px;
 }
 
 .sectionTitle {
@@ -128,27 +152,18 @@ section {
 }
 
 .sectionContentBox {
-  display: flex;
-  align-items: center;
-  padding: 16px 24px;
-  border: 1px solid var(--sonicSilver);
-  border-radius: 2px;
+  /* border: 1px solid var(--sonicSilver); */
 }
 
 .textButtonBox {
   display: flex;
   align-items: center;
-  margin-left: 24px;
 }
-
-/* .containerTextBox{
-    margin-left: 24px;
-} */
 
 .containerTitle {
   color: var(--jet);
-  margin-bottom: 16px;
   font-weight: bold;
+  padding: 16px 8px;
 }
 
 .containerContent {
@@ -157,6 +172,7 @@ section {
   font-size: 1.15rem;
   line-height: 1.5rem;
   text-align: justify;
+  padding: 0 16px 16px
 }
 
 .containerCaption {
