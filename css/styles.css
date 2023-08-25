@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Inter var,Roboto,Helvetica Neue,Arial,sans-serif;
   user-select: none;
   background: rgb(241, 245, 249);
   color: rgb(17, 24, 39);
@@ -121,7 +121,7 @@ header {
 
 /* ======================== content css ======================= */
 main {
-  padding: 80px 40px;
+  padding: 40px 40px;
   max-width: 1200px;
   margin: auto;
 }
@@ -155,7 +155,7 @@ section {
 
 /* ======================== reader options grid css ======================= */
 .grid-container {
-  margin-top: 80px;
+  margin-top: 60px;
   display: grid;
   /* grid-template-columns: auto auto auto; */
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -163,7 +163,7 @@ section {
 }
 
 .grid-item {
-  padding: 48px 40px;
+  padding: 40px 32px;
   background-color: rgb(255, 255, 255);
   color: rgb(17, 24, 39);
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -200,7 +200,7 @@ section {
   letter-spacing: -0.025em;
   line-height: 1.5;
   font-weight: 500;
-  margin-top: 8px;
+  margin-top: 16px;
   color: rgb(107, 114, 128);
 }
 
