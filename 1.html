@@ -23,11 +23,11 @@
 
 <body class="d-flex">
 
-    <div class="left col-md-6">
+    <section class="leftContainer col-md-6">
         <div class="image-container">
-            <img class="leftSideImg" src="images/launchPage.jpg" />
+            <img class="leftSideImg" src="images/computer-science.png" />
         </div>
-    </div>
+    </section>
 
     <section class="rightContainer col-md-6">
         <div class="LogoBox">
@@ -45,17 +45,21 @@
                 </div>
                 <input type="text" class="form-control" id="username" name="name">
             </div>
-            <div class="mb-3 readerOptionsBox">
+            <div class="readerOptionsBox">
                 <p class="readerOptionsLabel">Choose your reader style:</p>
                 <div class="renderOptions">
                     <div class="renderOption">
-                        <input type="radio" id="fixedReader" name="reader" value="fixedReader">
+                        <input type="radio" id="fixedReader" name="reader" value="fixedReader" checked>
                         <label class="readerOptionLabel" for="fixedReader">Fixed</label>
                     </div>
                     <div class="renderOption">
                         <input type="radio" id="reflowableReader" name="reader" value="reflowableReader">
                         <label class="readerOptionLabel" for="reflowableReader">Reflowable</label>
                     </div>
+                </div>
+                <div class="readerTextBox">
+                    <img class="readerTextImage" src="images/lamp.png"/>
+                    <p id="readerText"></p>
                 </div>
             </div>
         </form>

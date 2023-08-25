@@ -7,11 +7,20 @@ inputField.addEventListener("input", function () {
 
 var radioButtons = document.getElementsByName('reader');
 var selectedValue;
+var readerText = document.getElementById('readerText');
+var fixedReaderText = "Experience the future of Digital Reading and say goodbye to dull and lifeless documents, as our reader brings the content to life, makes it more engaging and informative.";
+var reflowableReader = "Exhausted with conventional textbooks and static PDFs? Embark on a journey with our innovative reader where information becomes a vibrant, interactive experience.";
+readerText.textContent = fixedReaderText;
 
 radioButtons.forEach(function (radioButton) {
     radioButton.addEventListener('click', function () {
         selectedValue = radioButton.value;
         console.log("Selected Value: " + selectedValue);
+        if (selectedValue === 'fixedReader') {
+            readerText.textContent = fixedReaderText;
+        } else if (selectedValue === 'reflowableReader') {
+            readerText.textContent = reflowableReader;
+        }
     });
 });
 
@@ -26,7 +35,6 @@ function webbookClick(name) {
 }
 
 function launch() {
-    debugger
     let name = username.trim();
     if (name !== "" && name !== undefined) {
         if (selectedValue === "fixedReader") {

@@ -10,6 +10,8 @@
   --scroll-bar-color: #dedede;
   --scroll-bar-bg-color: #faf8f7;
   --celticBlue: #3169cc;
+  --blueBerry: #5485fe;
+  --blueBerryDark: #3f7cff;
 }
 
 body {
@@ -42,8 +44,11 @@ html::-webkit-scrollbar-thumb {
 }
 
 /* ========================= left side container css ==========================*/
-.left {
-  background-color: var(--celticBlue);
+.leftContainer {
+  background-image: url("https://pub-static.fotor.com/assets/bg/78f0d7f1-e8e5-4f87-9af7-17495858c8ec.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--blueBerry);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,8 +75,7 @@ html::-webkit-scrollbar-thumb {
 .rightContainer {
   display: flex;
   flex-direction: column;
-  padding: 80px;
-  padding-top: 100px;
+  padding: 50px 80px;
 }
 
 .LogoBox {
@@ -101,8 +105,9 @@ html::-webkit-scrollbar-thumb {
   color: var(--cssGray);
 }
 
-/* .readerOptionsBox {
-} */
+.readerOptionsBox {
+  margin-bottom: 24px;
+}
 
 .readerOptionsLabel {
   font-size: 1.15rem;
@@ -111,12 +116,12 @@ html::-webkit-scrollbar-thumb {
   margin-bottom: 8px;
 }
 
-.renderOptions{
+.renderOptions {
   display: flex;
   align-items: center;
 }
 
-.renderOption{
+.renderOption {
   display: flex;
   align-items: center;
 }
@@ -149,11 +154,33 @@ input[type="radio"]:before {
 }
 
 input[type="radio"]:checked:before {
-  background: var(--celticBlue);
+  background: var(--blueBerry);
 }
 
 input[type="radio"]:checked {
-  border-color: var(--celticBlue);
+  border-color: var(--blueBerry);
+}
+
+.readerTextBox{
+  background-color: rgba(167, 200, 255, 0.5);
+  border: 2px dashed var(--blueBerry);
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.readerTextImage{
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+#readerText{
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--cssGray);
 }
 
 .buttonsBox {
@@ -170,7 +197,7 @@ input[type="radio"]:checked {
   padding: 8px 12px;
   border: none;
   border-radius: 4px;
-  background-color: var(--celticBlue);
+  background-color: var(--blueBerry);
   color: var(--white);
   font-size: 1.15rem;
   cursor: pointer;
@@ -178,7 +205,7 @@ input[type="radio"]:checked {
 }
 
 .launchButton:hover {
-  background-color: #1d4a88;
+  background-color: var(--blueBerryDark);
   color: var(--white);
 }
 
