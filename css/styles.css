@@ -27,6 +27,7 @@ body {
   font-family: "Inter var", "Roboto", "Helvetica Neue", Arial, sans-serif;
   background: rgb(241, 245, 249);
   color: rgb(17, 24, 39);
+  user-select: none;
 }
 
 * {
@@ -257,6 +258,55 @@ a:visited {
 
 .launchButton {
   width: 100%;
+  background-color: transparent;
+  outline: 0px;
+  margin: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  font-family: "Inter var", Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.75;
+  min-width: 64px;
+  padding: 7px 21px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border: 1px solid currentcolor;
+  color: inherit;
+  text-transform: none;
+  border-radius: 28px;
+}
+
+.launchButton:hover {
+  text-decoration: none;
+  background-color: rgba(17, 24, 39, 0.04);
+  box-shadow: none;
+}
+
+.rightArrow {
+  margin-left: 8px;
+}
+
+.releaseLink {
+  color: var(--steelBlue);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+/*============================ selected css ============================*/
+.selectedDiv {
+  border: 2px solid rgb(55, 48, 163);
+  box-shadow: 0 0 5px rgb(55, 48, 163);
+}
+
+.launchSelectedButton {
+  width: 100%;
   outline: 0px;
   border: 0px;
   margin: 0px;
@@ -282,27 +332,10 @@ a:visited {
   border-radius: 28px;
 }
 
-.launchButton:hover {
+.launchSelectedButton:hover {
   text-decoration: none;
   background-color: rgb(55, 48, 163);
   box-shadow: none;
-}
-
-.rightArrow {
-  margin-left: 8px;
-}
-
-.releaseLink {
-  color: var(--steelBlue);
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 16px;
-}
-
-/*============================ selected css ============================*/
-.selectedDiv {
-  border: 2px solid rgb(55, 48, 163);
-  box-shadow: 0 0 5px rgb(55, 48, 163);
 }
 
 /* ======================== media query css ======================= */
