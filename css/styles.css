@@ -237,6 +237,13 @@ section {
   margin-bottom: 24px;
 }
 
+.directLinkText{
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: rgb(17, 24, 39);
+}
+
 a,
 a:visited {
   color: #3e75d6;
