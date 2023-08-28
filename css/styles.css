@@ -71,12 +71,6 @@ header {
   color: var(--jet);
 }
 
-.welcomeText {
-  font-size: 1.25rem;
-  font-weight: normal;
-  color: var(--sonicSilver);
-}
-
 .comproText {
   font-size: 32px;
 }
@@ -147,8 +141,7 @@ main {
 
 .welcomeTitle {
   font-family: 'Oswald', Arial, sans-serif;
-  font-size: 32px;
-  letter-spacing: -0.025em;
+  font-size: 42px;
   line-height: 1.25;
   font-weight: 800;
   color: rgb(17, 24, 39);
@@ -156,7 +149,6 @@ main {
 
 .welcomeSubtitle {
   font-size: 20px;
-  letter-spacing: -0.025em;
   line-height: 1.5;
   font-weight: 400;
   color: rgb(107, 114, 128);
@@ -196,27 +188,12 @@ section {
   border: 2px solid white;
 }
 
-/* .sectionTitle {
-  margin-bottom: 16px;
-  color: var(--jet);
-} */
-
-/* .sectionContentBox {
-  border: 1px solid var(--sonicSilver);
-} */
-
-/* .textButtonBox {
-  display: flex;
-  align-items: center;
-} */
-
 .containerBox {
   flex: 1;
 }
 
 .containerTitle {
   font-size: 24px;
-  letter-spacing: -0.025em;
   line-height: 1.25;
   font-weight: 700;
   color: rgb(17, 24, 39);
@@ -224,19 +201,11 @@ section {
 
 .containerContent {
   font-size: 16px;
-  letter-spacing: -0.025em;
   line-height: 1.5;
   font-weight: 500;
   margin-top: 16px;
   color: rgb(107, 114, 128);
 }
-
-/* .containerCaption {
-  color: var(--sonicSilver);
-  font-style: italic;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-} */
 
 .directLinkBox {
   margin-top: 12px;
@@ -356,9 +325,6 @@ a:visited {
     justify-content: space-between;
     max-width: 1000px;
     margin: auto;
-  }
-  .welcomeText {
-    font-size: 1rem;
   }
   .comproText {
     font-size: 1.5rem;
