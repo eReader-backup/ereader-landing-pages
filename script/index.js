@@ -25,7 +25,7 @@ let lastSelectedButtons = [
 ];
 
 function handleDivClick(event) {
-  if (event.target.tagName != "BUTTON" && lastSelectedDiv.id != event.currentTarget.id) {
+  if (lastSelectedDiv.id != event.currentTarget.id) {
     if (lastSelectedDiv !== null) {
       lastSelectedDiv.classList.remove("selectedDiv");
     }
@@ -43,5 +43,5 @@ function handleDivClick(event) {
   }
 }
 
-document.getElementById("div1").addEventListener("click", handleDivClick);
-document.getElementById("div2").addEventListener("click", handleDivClick);
+document.getElementById("div1").addEventListener("mousedown", handleDivClick);
+document.getElementById("div2").addEventListener("mousedown", handleDivClick);
