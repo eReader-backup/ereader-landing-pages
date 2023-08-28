@@ -39,14 +39,14 @@ function handleDivClick(event) {
     event.currentTarget.classList.add("selectedDiv");
     lastSelectedDiv = event.currentTarget;
 
-    const button = event.currentTarget.querySelector("button");
-    if (button) {
-        if (lastSelectedButton !== null) {
-            lastSelectedButton.classList.remove("launchSelectedButton");
-        }
-        button.classList.add("launchSelectedButton");
-        lastSelectedButton = button;
-    }
+    // const button = event.currentTarget.querySelector("button");
+    // if (button) {
+    //     if (lastSelectedButton !== null) {
+    //         lastSelectedButton.classList.remove("launchSelectedButton");
+    //     }
+    //     button.classList.add("launchSelectedButton");
+    //     lastSelectedButton = button;
+    // }
 }
 
 document.getElementById("div1").addEventListener("click", handleDivClick);
