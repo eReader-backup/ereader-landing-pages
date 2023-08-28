@@ -1,127 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- The first thing in any HTML file should be the charset -->
+    <meta charset="utf-8" />
+    <!-- Make site non indexed and non searchable for crawlers -->
+    <meta name="robots" content="index, follow" />
+    <!-- Make the page mobile compatible -->
+    <meta
+      name="viewport"
+      id="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <!-- favicon, title and description -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <title>comproDLS eReader POC| Wayside Publishing Demo</title>
+    <meta
+      name="description"
+      content="comproDLS Reader | Wayside Publishing Demo"
+    />
+    <!-- fonts file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style sheet link-->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<head>
-  <!-- The first thing in any HTML file should be the charset -->
-  <meta charset="utf-8" />
-  <!-- Make site non indexed and non searchable for crawlers -->
-  <meta name="robots" content="index, follow" />
-  <!-- Make the page mobile compatible -->
-  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1" />
-  <!-- favicon, title and description -->
-  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
-  <title>comproDLS eReader POC| Wayside Publishing Demo</title>
-  <meta name="description" content="comproDLS Reader | Wayside Publishing Demo" />
-  <!-- fonts file -->
-  <link rel="stylesheet" type="font/woff2" href="fonts/Inter-italic.var.woff2">
-  <link rel="stylesheet" type="font/woff2" href="fonts/Inter-roman.var.woff2">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
-  <!-- style sheet link-->
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-
-<body>
-  <header>
-    <div class="headerDiv">
-      <h1 class="headingFontColor">
-        <span class="comproText">InterKulturell<sup>&#174;</sup> 1</span>
-      </h1>
-      <div class="lineLogoBox">
-        <div class="verticalHR"></div>
-        <img class="waysideLogo" src="images/waysideLogo.svg" />
-      </div>
-    </div>
-  </header>
-  <hr />
-  <main>
-    <div class="welcomeBox">
-      <h1 class="welcomeTitle">comproDLS<sup>TM</sup> eReader POC</h1>
-      <p class="welcomeSubtitle">
-        Experience seamless reading on any device with comprehensive tools like notes, highlighting, bookmarks,
-        hotlinking, etc.
-      </p>
-    </div>
-    <!-- <section>
-      <form class="usernameForm">
-        <label for="username" class="usernameLabel">Enter your name:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            class="usernameInput"
-          />
-      </form>
-    </section> -->
-    <div class="grid-container">
-      <div>
-        <div id="div1" class="grid-item selectedDiv" tabindex="0">
-          <div class="containerBox">
-            <p class="containerTitle">Reflowable Reader</p>
-            <p class="containerContent">
-              Our mobile-first responsive design adapts flawlessly across resolutions, ensuring every page retains the
-              true
-              essence of its original design.
-            </p>
-          </div>
-          <button class="launchButton launchSelectedButton" onclick="webbookClick()">
-            Student Edition
-          </button>
-        </div>
-        <div class="directLinkBox">
-          <p class="directLinkText">Direct Launch URL:</p>
-          <a target="_blank"
-            href="https://wayside-reader2.comprodls.com/demo/student-edition/interkulturel_1_vtext">https://wayside-reader2.comprodls.com/demo/student-edition/interkulturel_1_vtext</a>
+  <body>
+    <header>
+      <div class="headerDiv">
+        <h1 class="headingFontColor">
+          <span class="comproText">InterKulturell<sup>&#174;</sup> 1</span>
+        </h1>
+        <div class="lineLogoBox">
+          <div class="verticalHR"></div>
+          <img class="waysideLogo" src="images/waysideLogo.svg" />
         </div>
       </div>
-      <div>
-        <div id="div2" class="grid-item sectionContentBox" tabindex="0">
-          <div class="containerBox">
-            <h2 class="containerTitle">Fixed Layout Reader</h2>
-            <p class="containerContent">
-              Our Print-fidelity adaptive rendering optimized for front-of-class delivery. Multi-device support and
-              mobile-ready.
-            </p>
-          </div>
-          <div class="buttonsBox">
-            <button class="launchButton launchSelectedButton" onclick="flipbookClick()">
+    </header>
+    <hr />
+    <main>
+      <div class="welcomeBox">
+        <h1 class="welcomeTitle">comproDLS<sup>TM</sup> eReader POC</h1>
+        <p class="welcomeSubtitle">
+          Experience seamless reading on any device with comprehensive tools
+          like notes, highlighting, bookmarks, hotlinking, etc.
+        </p>
+      </div>
+      <div class="grid-container">
+        <div>
+          <div id="div1" class="grid-item selectedDiv" tabindex="0">
+            <div class="containerBox">
+              <p class="containerTitle">Reflowable Reader</p>
+              <p class="containerContent">
+                Our mobile-first responsive design adapts flawlessly across
+                resolutions, ensuring every page retains the true essence of its
+                original design.
+              </p>
+            </div>
+            <button
+              class="launchButton launchSelectedButton"
+              onclick="webbookClick()"
+            >
               Student Edition
             </button>
-            <button class="launchButton launchSelectedButton" onclick="flipbookClick()">
-              Teacher Edition
-            </button>
+          </div>
+          <div class="directLinkBox">
+            <p class="directLinkText">SE Link:</p>
+            <a
+              target="_blank"
+              href="https://wayside-reader2.comprodls.com/demo/student-edition/interkulturel_1_vtext"
+              >https://wayside-reader2.comprodls.com/demo/student-edition/interkulturel_1_vtext</a
+            >
           </div>
         </div>
-        <div class="directLinkBox">
-          <p class="directLinkText">Direct Launch URL:</p>
-          <a target="_blank"
-            href="https://wayside-reader1.comprodls.com/demo/student-edition/interkulturel_1_vtext">https://wayside-reader1.comprodls.com/demo/student-edition/interkulturel_1_vtext</a>
+        <div>
+          <div id="div2" class="grid-item sectionContentBox" tabindex="0">
+            <div class="containerBox">
+              <h2 class="containerTitle">Fixed Layout Reader</h2>
+              <p class="containerContent">
+                Our Print-fidelity adaptive rendering optimized for
+                front-of-class delivery. Multi-device support and mobile-ready.
+              </p>
+            </div>
+            <div class="buttonsBox">
+              <button class="launchButton" onclick="flipbookClick()" style="margin-right: 8px;">
+                Student Edition
+              </button>
+              <button class="launchButton" onclick="flipbookClickTE()" style="margin-left: 8px;">
+                Teacher Edition
+              </button>
+            </div>
+          </div>
+          <div class="directLinkBox">
+            <p class="directLinkText">SE Link:</p>
+            <a
+              target="_blank"
+              href="https://wayside-reader1.comprodls.com/demo/student-edition/interkulturel_1_vtext"
+              >https://wayside-reader1.comprodls.com/demo/student-edition/interkulturel_1_vtext</a
+            >
+          </div>
+          <div class="directLinkBox">
+            <p class="directLinkText">TE Link:</p>
+            <a
+              target="_blank"
+              href="https://wayside-reader1.comprodls.com/demo/teacher-edition/interkulturel_1_te"
+              >https://wayside-reader1.comprodls.com/demo/teacher-edition/interkulturel_1_te</a
+            >
+          </div>
         </div>
       </div>
-      <!-- <div id="div3" class="grid-item sectionContentBox" tabindex="0">
-        <div class="containerBox">
-          <h2 class="containerTitle">Teacher Edition: Fixed Layout</h2>
-          <p class="containerContent">
-            Our Print-fidelity adaptive rendering optimized for front-of-class delivery. Multi-device support and
-            mobile-ready.
-          </p>
-        </div>
-        <button class="launchButton" onclick="flipbookClick()">
-          Launch TE
-        </button>
-        <div class="directLinkBox">
-          <p class="directLinkText">Direct Launch URL:</p>
-          <a target="_blank"
-            href="https://wayside-reader1.comprodls.com/demo/student-edition/interkulturel_1_vtext">https://wayside-reader1.comprodls.com/demo/student-edition/interkulturel_1_vtext</a>
-        </div>
-      </div> -->
-    </div>
-  </main>
+    </main>
 
-  <!-- includes js file -->
-  <script src="script/index.js"></script>
-</body>
-
+    <!-- includes js file -->
+    <script src="script/index.js"></script>
+  </body>
 </html>
