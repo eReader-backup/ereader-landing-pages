@@ -24,7 +24,7 @@
 }
 
 body {
-  font-family: "Inter var", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   background: rgb(241, 245, 249);
   color: rgb(17, 24, 39);
 }
@@ -146,6 +146,7 @@ main {
 }
 
 .welcomeTitle {
+  font-family: 'Oswald', Arial, sans-serif;
   font-size: 32px;
   letter-spacing: -0.025em;
   line-height: 1.25;
@@ -174,7 +175,7 @@ section {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 64px;
-  max-width: 850px;
+  max-width: 800px;
 }
 
 .grid-item {
@@ -268,7 +269,6 @@ a:visited {
   vertical-align: middle;
   appearance: none;
   text-decoration: none;
-  font-family: "Inter var", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 15px;
   line-height: 1.75;
