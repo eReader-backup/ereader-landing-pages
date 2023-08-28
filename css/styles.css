@@ -240,10 +240,11 @@ section {
 
 .directLinkBox {
   margin-top: 12px;
+  font-size: 11px;
 }
 
 .directLinkText {
-  font-size: 14px;
+  font-size: 11px;
   line-height: 1.5;
   font-weight: 600;
   color: rgb(17, 24, 39);
