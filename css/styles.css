@@ -209,7 +209,7 @@ section {
 }
 
 .directLinkBox {
-  margin-top: 12px;
+  margin:  16px 16px 0px 16px;
   font-size: 11px;
 }
 
@@ -222,7 +222,7 @@ section {
 
 a,
 a:visited {
-  color: #3e75d6;
+  color: #808081;
   word-break: break-all;
 }
 
@@ -274,7 +274,6 @@ a:visited {
 .selectedDiv {
   box-shadow: none;
   border-color: rgb(55, 48, 163);
-  background-color: rgb(241, 247, 255);
 }
 
 .launchSelectedButton {
