@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const START_DATE = 1719566744;
+  const START_DATE = 1722501584;
   const FREE_TRIAL_DAYS = 30;
 
   const currentTime = Date.now();
