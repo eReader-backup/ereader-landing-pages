@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- The first thing in any HTML file should be the charset -->
+    <meta charset="utf-8" />
+    <!-- Make site non indexed and non searchable for crawlers -->
+    <meta name="robots" content="index, follow" />
+    <!-- Make the page mobile compatible -->
+    <meta
+      name="viewport"
+      id="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <!-- favicon, title and description -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+    <title>comproDLS Inlingua Pilot</title>
+    <meta
+      name="description"
+      content="comproDLS Inlingua Pilot"
+    />
+    <!-- fonts file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style sheet link-->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="headerDiv">
+        <div class="lineLogoBox">
+          <div class="verticalHR"></div>
+          <img class="waysideLogo" src="images/inlinguaLogo.svg" />
+        </div>
+      </div>
+    </header>
+    <hr />
+    <main>
+      <div class="mainContent">
+        <div class="welcomeBox">
+          <h1 class="welcomeTitle"><span>comproDLS<sup>TM</sup></span> eReader</h1>
+          <p class="welcomeSubtitle">
+            <span>Inlingua Trial<span id="trialStartDate"></span></span>
+            Fully accessible experience with comprehensive tools
+            like notes, highlighting, bookmarks, hotlinking, etc.
+          </p>
+        </div>
+        <div class="trialExpiration">Trial version expires in <span id="trialRemainingDays">30</span> days</div>
+        <div class="grid-container">
+          <div>
+            <div id="div1" class="grid-item selectedDiv" tabindex="0">
+              <div class="containerBox">
+                <h2 class="containerTitle">eReader</h2>
+                <p class="containerContent">
+                  Our image-based adaptive rendering optimized for
+                  front-of-class delivery. Multi-device support and mobile-ready.
+                </p>
+              </div>
+              <div class="inputsBox">
+                <div class="pageNoInputContainer">
+                  <label for="pageNo" class="inputPageNoLabel">Page No. </label>
+                  <input type="text" name="pageNo" id="pageNo" class="inputPageNo">
+                </div>
+                <div class="switchBtnContainer">
+                  <span>Launch in Iframe: </span>
+                  <label class="switch">
+                    <input type="checkbox" id="iframeSwitch">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="buttonsBox">
+                <button class="launchButton launchSelectedButton" onclick="flipbookClick()" style="margin-right: 8px;">
+                  Launch
+                </button>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex;">
+            <div id="div2" class="grid-item sectionContentBox" tabindex="0">
+              <div class="containerBox">
+                <h2 class="containerTitle">Builder</h2>
+                <p class="containerContent">
+                  Streamline educational content creation and delivery with Builder, enabling seamless integration of text, videos, images, and more, while minimizing reliance on tech teams.
+                </p>
+              </div>
+              <button
+                class="launchButton disabled"
+                onclick="builderClick()"
+              >
+                Launch
+              </button>
+              <span class="disableLaunchBtnText">*Not Available in Trial Version*</span>
+            </div>
+          </div>
+        </div>
+        <!--<div id="webbookIframe" class="backdrop">
+          <div class="closeIcon" onclick="closeIframe()">
+            <img src="images/closeIcon.svg" />
+          </div>
+          <div id="iframeContainer">
+          </div>
+        </div>-->
+      </div>
+      <div class="accordianSection">
+        <div id="accordian1">
+          <div class="accordianTitle rotate" onclick="toggleAccordian(event)" aria-expanded="true">
+            <h1>Additional Content - 1</h1>
+            <button>
+              <img src="images/downArrowIcon.svg" />
+            </button>
+          </div>
+          <div class="accordianContainer">
+            <div class="accordianContent">
+              <h2>What is Lorem Ipsum?</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+            </div>
+            <div class="accordianContent">
+              <h2>Why do we use it?</h2>
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="accordian2">
+          <div class="accordianTitle rotate" onclick="toggleAccordian(event)" aria-expanded="true">
+            <h1>Additional Content - 2</h1>
+            <button aria-expanded="true">
+              <img src="images/downArrowIcon.svg" />
+            </button>
+          </div>
+          <div class="accordianContainer">
+            <div class="accordianContent">
+              <h2>What is Lorem Ipsum?</h2>
+              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+            </div>
+            <div class="accordianContent">
+              <h2>Why do we use it?</h2>
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- includes js file -->
+    <script src="script/index.js"></script>
+  </body>
+</html>
