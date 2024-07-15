@@ -128,7 +128,7 @@ header {
 }
 
 .welcomeTitle {
-  font-size: 42px;
+  font-size: 62px;
   line-height: 1.25;
   font-weight: 800;
   color: #000000;
@@ -137,7 +137,6 @@ header {
 .welcomeTitle span{
   font-family: 'Oswald', Arial, sans-serif;
   color: rgb(17, 24, 39);
-  font-size: 62px;
 }
 
 .welcomeSubtitle {
