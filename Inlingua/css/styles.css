@@ -72,7 +72,7 @@ header {
 
 .welcomeTitle sup {
   font-size: 18px;
-  vertical-align: text-top;
+  vertical-align: top;
 }
 
 .readerText {
@@ -128,15 +128,11 @@ header {
 }
 
 .welcomeTitle {
+  font-family: 'Oswald', Arial, sans-serif;
   font-size: 62px;
   line-height: 1.25;
   font-weight: 800;
   color: #000000;
-}
-
-.welcomeTitle span{
-  font-family: 'Oswald', Arial, sans-serif;
-  color: rgb(17, 24, 39);
 }
 
 .welcomeSubtitle {
