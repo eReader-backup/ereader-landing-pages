@@ -20,7 +20,7 @@ window.onresize = function () {
 
 function toggleSidebar(){
   const sidebar = document.querySelector(".sidebarContainer");
-  if(screen.width < 1024){
+  if(window.innerWidth < 1024){
     sidebar.classList.add('hidden');
   }
   else{
