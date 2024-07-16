@@ -460,11 +460,11 @@ input:checked + .slider:before {
   padding: 40px 60px;
 }
 
-.accordianSection > div:first-child{
+.accordianSection > div:nth-child(odd){
   background-color: white;
 }
 
-#accordian1 > div, #accordian2 > div{
+#accordian1 > div, #accordian2 > div, #accordian3 > div{
   max-width: 1024px;
   margin: auto;
 }
@@ -502,7 +502,7 @@ input:checked + .slider:before {
 
 .accordianContainer{
   overflow: hidden;
-  max-height: 1000px;
+  max-height: 2000px;
   transition: max-height 0.5s ease-out;
 }
 
@@ -519,11 +519,30 @@ input:checked + .slider:before {
   margin-bottom: 8px;
 }
 
-.accordianContent p{
+.accordianContent .description{
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
+
 }
+
+.accordianContent .description ul{
+  margin-left: 20px;
+}
+
+.accordianContent .description table {
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 16px;
+}
+
+.accordianContent .description table th, .accordianContent .description table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 33%;
+}
+
 /* ======================== media query css ======================= */
 @media (max-width: 960px) {
   .grid-container {
