@@ -527,20 +527,53 @@ input:checked + .slider:before {
 }
 
 .accordianContent .description ul{
-  margin-left: 20px;
+  margin-left: 40px;
+}
+
+.accordianContent .description ul li{
+  padding-left: 16px;
+  margin: 16px 0;
 }
 
 .accordianContent .description table {
-  border-collapse: collapse;
-  margin: auto;
+  border-spacing: 0;
   margin-top: 16px;
+  width: 50%;
 }
 
 .accordianContent .description table th, .accordianContent .description table td {
-  border: 1px solid #dddddd;
+  border-right: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
   text-align: left;
   padding: 8px;
   width: 33%;
+}
+
+.accordianContent .description table th{
+  border-top: 6px solid #b45c3d;
+  background-color: #f7eeeb;
+  font-weight: normal;
+}
+
+.accordianContent .description table th:first-child{
+  border-top-left-radius: 8px;
+  border-left: 1px solid #dedede;
+}
+
+.accordianContent .description table th:last-child{
+  border-top-right-radius: 8px;
+}
+
+.accordianContent .description table td:first-child{
+  border-left: 1px solid #dedede;
+}
+
+.accordianContent .description table tr:last-child td:first-child{
+  border-bottom-left-radius: 8px;
+}
+
+.accordianContent .description table tr:last-child td:last-child{
+  border-bottom-right-radius: 8px;
 }
 
 /* ======================== media query css ======================= */
