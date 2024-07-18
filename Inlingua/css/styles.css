@@ -236,7 +236,7 @@ section {
 
 a,
 a:visited {
-  color: #808081;
+  color: blue;
   word-break: break-all;
 }
 
@@ -513,6 +513,10 @@ input:checked + .slider:before {
 .accordianContent{
   margin-top: 40px;
   margin-bottom: 32px;
+}
+
+.accordianContent:last-child{
+  margin-bottom: 0;
 }
 
 .accordianContent h2{
