@@ -80,30 +80,30 @@
       <div class="accordianSection">
         <div id="accordian1">
           <div class="accordianTitle rotate" onclick="toggleAccordian(event)" aria-expanded="true">
-            <h1>Launch Methods and Options</h1>
+            <h1>Launching the eReader</h1>
             <button>
               <img src="images/downArrowIcon.svg" />
             </button>
           </div>
           <div class="accordianContainer">
             <div class="accordianContent">
-              <h2>How to Launch the eReader?</h2>
+              <h2>Standard Launch</h2>
               <div class="description">
                 <ul>
-                  <li>To launch the eReader, click on the Launch button in the eReader card. You can specify a particular page number to start from.</li>
-                  <li>If no page number is specified, the eReader will default to the last page you visited in your previous session.</li>
-                  <li>Additionally, you have the option to launch the eReader in an iframe. This will give you an idea of how the eReader looks and feels when embedded in another application.</li>
+                  <li>Click "Launch" in the eReader card to open the eReader.</li>
+                  <li>You can start from a specific page by entering the page number.</li>
+                  <li>If no page number is provided, the eReader will open to the last page you visited.</li>
                 </ul>
               </div>
             </div>
             <div class="accordianContent">
-              <h2>Embedding eReader in your LMS</h2>
+              <h2>Embedding the eReader in Your LMS</h2>
               <div class="description">
                 <ul>
-                  <li>The eReader supports embedding itself into other applications. This can be achieved with the help of an iframe.</li>
-                  <li>Select the option “Launch in Iframe” before clicking the Launch button. This will give you an idea of how the eReader looks and feels when embedded in another application.</li>
-                  <li>Technical details are provided <a href="#eReaderRef">below</a>.</li>
+                  <li>Embed the eReader into your LMS using an iframe for a seamless integration.</li>
+                  <li>Select the “Launch in Iframe” option and click "Launch" to experience the eReader within another application.</li>
                 </ul>
+                <p>For detailed technical information, see the documentation <a href="#eReaderRef">below</a>.</p>
               </div>
             </div>
           </div>
@@ -117,13 +117,13 @@
           </div>
           <div class="accordianContainer">
             <div class="accordianContent">
-              <h2>Hotlink Media & Activities</h2>
+              <h2>Hotlinking Media & Activities</h2>
               <div class="description">
-                <p>comproDLS eReader supports the following types of hotlinks:</p>
+                <p>comproDLS<sup>TM</sup> eReader supports the following types of hotlinks:</p>
                 <ul>
-                  <li><b>External Activities:</b> Link your interactive activities inside the eReader allowing students to perform the activities in context of the book material.</li>
-                  <li><b>Media:</b> Play video and audio within the eReader, with support for transcripts.</li>
-                  <li><b>Jump To Page:</b> Create links that navigate directly to specific pages within the eReader.</li>
+                  <li><b>Activities:</b> Embed interactive activities directly within the eReader, enabling students to engage with activities in the context of the book material.</li>
+                  <li><b>Media Integration:</b> Seamlessly play videos and audio within the eReader, complete with transcript support for enhanced accessibility.</li>
+                  <li><b>Jump to Page:</b> Create direct links to specific pages, allowing quick navigation within the eReader.</li>
                 </ul>
               </div>
             </div>
@@ -131,9 +131,9 @@
               <h2>Keyboard Support</h2>
               <div class="description">
                 <ul>
-                  <li>The eReader is designed with keyboard accessibility in mind.</li>
-                  <li>The keyboard help menu can be launched using the ? key.</li>
-                  <li>To move around the eReader application, use the TAB key</li>
+                  <li>The eReader is designed for optimal keyboard accessibility.</li>
+                  <li>Launch the keyboard help menu by pressing the ? key.</li>
+                  <li>Easily navigate through the eReader application using the TAB key.</li>
                 </ul>
               </div>
             </div>
@@ -156,29 +156,30 @@
                     <ul>
                       <li>Base URL i.e. <i>https://inlreader.comprodls.com</i></li>
                       <li>Program Code - Unique code of the program</li>
-                      <li>Product Class - Whether the eReader is for Student Edition or Teacher Edition</li>
+                      <li>Product Class - Specifies if the eReader is for Student Edition or Teacher Edition</li>
                       <li>Product Code - Unique code for the title</li>
                     </ul>
                   </li>
+                  <li>To specify a page number to be launched, use the "page" query parameter in the eReader URL</li>
                   <li>
-                    Use the query parameter page in the eReader URL to specify the page number to be launched. For example, to launch page 5 the url will be:
+                    For example, to launch the page 5:
                     <ul>
-                      <li><i>https://inlreader.comprodls.com/demo/student-edition/interkulturel_1_vtext?page=5 </i></li>
+                      <li><i>https://inlreader.comprodls.com/demo/student-edition/interkulturel_1_vtext?<b>page=5</b></i></li>
                     </ul>
                   </li>
                 </ul>
               </div>
             </div>
             <div class="accordianContent" id="eReaderRef">
-              <h2>How to embed the eReader in your application?</h2>
+              <h2>Embedding the eReader in Your Application</h2>
               <div class="description">
                 <ul>
-                  <li>Create an iframe: Set the src attribute of the iframe to <i>https://inlreader.comprodls.com/demo/student-edition/interkulturel_1_vtext</i></li>
+                  <li>Create an iframe: Set the <i>src</i> attribute of the iframe to <i>https://inlreader.comprodls.com/demo/student-edition/interkulturel_1_vtext</i></li>
                   <li>Allow Fullscreen: Set the <i>allowfullscreen</i> attribute in the iframe to enable the eReader to go fullscreen when the user clicks on the fullscreen button.
                   </li>
-                  <li>Embed Mode: Set the query parameter embed when launching the eReader in an Iframe.</li>
-                  <li>Specify Page Number: Set the query parameter page in the eReader URL to specify the page number to be launched.</li>
-                  <li>Sample Iframe: <i>&lt;iframe src="https://inlreader.comprodls.com/demo/student-edition/interkulturel_1_vtext?page=36&embed" allowfullscreen&gt;</iframe></i></li>
+                  <li>Embed Mode: Set the query parameter <i>embed</i> when launching the eReader in an Iframe.</li>
+                  <li>Specify Page Number: Set the query parameter <i>page</i> in the eReader URL to specify the page number to be launched.</li>
+                  <li>Sample Iframe: <i>&lt;iframe src="https://inlreader.comprodls.com/demo/student-edition/interkulturel_1_vtext?page=36&embed" allowfullscreen&gt;&lt;/iframe&gt;</i></li>
                 </ul>
               </div>
             </div>

@@ -526,6 +526,10 @@ input:checked + .slider:before {
 
 }
 
+.accordianContent .description p sup{
+  font-size: 10px;
+}
+
 .accordianContent .description ul{
   margin-left: 40px;
 }
