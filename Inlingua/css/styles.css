@@ -584,6 +584,15 @@ input:checked + .slider:before {
   border-bottom-right-radius: 8px;
 }
 
+/* ======================== footer css ======================= */
+footer{
+  background-color: #faf8f7;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ======================== media query css ======================= */
 @media (max-width: 960px) {
   .grid-container {
