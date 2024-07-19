@@ -97,3 +97,14 @@ function toggleAccordian(event) {
     //accordianContainer.scrollIntoView(true);
   }
 }
+
+function onClickAnchor(event){
+  event.preventDefault();
+  const targetId = event.currentTarget.getAttribute("href");
+  const targetElement = document.querySelector(targetId);
+  var headerHeight = document.querySelector('header').offsetHeight;
+  window.scrollTo({
+    top: targetElement.offsetTop - (headerHeight + 20),
+    behavior: 'smooth'
+  });
+}
