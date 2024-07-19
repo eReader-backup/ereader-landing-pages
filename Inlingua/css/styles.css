@@ -545,8 +545,7 @@ input:checked + .slider:before {
 
 .accordianContent .description table {
   border-spacing: 0;
-  margin: 0 auto;
-  margin-top: 16px;
+  margin: 16px auto 90px;
   width: 50%;
 }
 
