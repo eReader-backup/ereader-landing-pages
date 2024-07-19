@@ -63,9 +63,11 @@ header {
   position: sticky;
   top: 0;
   border-bottom: 1px solid #9a9a9a;
+  z-index: 100;
 }
 
 .headerDiv {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,16 +86,11 @@ header {
 }
 
 .lineLogoBox {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
-
-.verticalHR {
-  border-left: 2px solid var(--sonicSilver);
-  height: 72px;
-  display: none;
-}
-
 
 /* ======================== header css ======================= */
 .usernameForm {
