@@ -1,251 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- The first thing in any HTML file should be the charset -->
-    <meta charset="utf-8" />
-    <!-- Make site non indexed and non searchable for crawlers -->
-    <meta name="robots" content="index, follow" />
-    <!-- Make the page mobile compatible -->
-    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1" />
-    <!-- favicon, title and description -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
-    <title>comproDLS Inlingua Pilot</title>
-    <meta name="description" content="comproDLS Inlingua Pilot" />
-    <!-- fonts file -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet" />
-    <!-- style sheet link-->
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
 
-  <body>
-    <header>
-      <div class="headerDiv">
-        <div class="lineLogoBox">
-          <img class="waysideLogo" src="images/inlinguaLogo.svg" />
-          <img src="images/comproLogo.svg" />
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="mainContent">
-        <div class="welcomeBox">
-          <h1 class="welcomeTitle">comproDLS<sup>TM</sup> eReader</h1>
-          <p class="welcomeSubtitle">
-            <span>Inlingua Trial<span id="trialStartDate"></span></span>
-            Mobile-first, customizable eBook experience with instructor tools, enriched media, and comprehensive WYSIWYG authoring.
-          </p>
-        </div>
-        <div class="trialExpiration">Trial version expires in <span id="trialRemainingDays">30</span> days</div>
-        <div class="grid-container">
-          <div>
-            <div id="div1" class="grid-item selectedDiv" tabindex="0">
-              <div class="containerBox">
-                <h2 class="containerTitle">eReader</h2>
-                <p class="containerContent">Our image-based adaptive rendering eReader optimized for multi-device delivery and mobile-ready.</p>
-              </div>
-              <div class="inputsBox">
-                <div class="pageNoInputContainer">
-                  <label for="pageNo" class="inputPageNoLabel">Page No. </label>
-                  <input type="text" name="pageNo" id="pageNo" class="inputPageNo" />
-                </div>
-                <div class="switchBtnContainer">
-                  <span>Launch in Iframe: </span>
-                  <label class="switch">
-                    <input type="checkbox" id="iframeSwitch" />
-                    <span class="slider round"></span>
-                  </label>
-                </div>
-              </div>
-              <div class="buttonsBox">
-                <button class="launchButton launchSelectedButton" onclick="flipbookClick()" style="margin-right: 8px">Launch</button>
-              </div>
-            </div>
-          </div>
-          <div style="display: flex">
-            <div id="div2" class="grid-item sectionContentBox" tabindex="0">
-              <div class="containerBox">
-                <h2 class="containerTitle">Builder</h2>
-                <p class="containerContent">Streamline eReader content delivery using our Builder tool set. Enabling drag-and-drop production workflows for creation, updates, hotlinking and enrichment of eBooks.</p>
-              </div>
-              <button class="launchButton disabled" onclick="builderClick()">Launch</button>
-              <span class="disableLaunchBtnText">*Not Available in Trial Version*</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordianSection">
-        <div id="accordian1">
-          <div class="accordianTitle rotate" onclick="toggleAccordian(event)" aria-expanded="true">
-            <h1>Launching the eReader</h1>
-            <button>
-              <img src="images/downArrowIcon.svg" />
-            </button>
-          </div>
-          <div class="accordianContainer">
-            <div class="accordianContent">
-              <h2>Standard Launch</h2>
-              <div class="description">
-                <ul>
-                  <li>Click "Launch" in the eReader card to open the eReader.</li>
-                  <li>You can start from a specific page by entering the page number.</li>
-                  <li>If no page number is provided, the eReader will open to the last page you visited.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="accordianContent">
-              <h2>Embedding the eReader in Your LMS</h2>
-              <div class="description">
-                <ul>
-                  <li>Embed the eReader into your LMS using an iframe for a seamless integration.</li>
-                  <li>Select the “Launch in Iframe” option and click "Launch" to experience the eReader within another application.</li>
-                </ul>
-                <p>For detailed technical information, see the documentation <a href="#eReaderRef" onclick="onClickAnchor(event)">below</a>.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="accordian2">
-          <div class="accordianTitle rotate" onclick="toggleAccordian(event)" aria-expanded="true">
-            <h1>Key Highlights</h1>
-            <button aria-expanded="true">
-              <img src="images/downArrowIcon.svg" />
-            </button>
-          </div>
-          <div class="accordianContainer">
-            <div class="accordianContent">
-              <h2>Hotlinking Media & Activities</h2>
-              <div class="description">
-                <p>comproDLS<sup>TM</sup> eReader supports the following types of hotlinks:</p>
-                <ul>
-                  <li><b>Activities:</b> Embed interactive activities directly within the eReader, enabling students to engage with activities in the context of the book material.</li>
-                  <li><b>Media Integration:</b> Seamlessly play videos and audio within the eReader, complete with transcript support for enhanced accessibility.</li>
-                  <li><b>Jump to Page:</b> Create direct links to specific pages, allowing quick navigation within the eReader.</li>
-                </ul>
-              </div>
-            </div>
-            <div class="accordianContent">
-              <h2>Keyboard Support</h2>
-              <div class="description">
-                <ul>
-                  <li>The eReader is designed for optimal keyboard accessibility.</li>
-                  <li>Launch the keyboard help menu by pressing the ? key.</li>
-                  <li>Easily navigate through the eReader application using the TAB key.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="accordian3">
-          <div class="accordianTitle rotate" onclick="toggleAccordian(event)" aria-expanded="true">
-            <h1>Technical Specifications</h1>
-            <button aria-expanded="true">
-              <img src="images/downArrowIcon.svg" />
-            </button>
-          </div>
-          <div class="accordianContainer">
-            <div class="accordianContent">
-              <h2>Launch Parameters</h2>
-              <div class="description">
-                <ul>
-                  <li>
-                    The eReader url comprises of 4 parts <i>baseURL/{Program-Code}/{Product-Class}/{Product-Code}</i>
-                    <ul>
-                      <li>Base URL i.e. <i>https://inlreader.comprodls.com</i></li>
-                      <li>Program Code - Unique code of the program</li>
-                      <li>Product Class - Specifies if the eReader is for Student Edition or Teacher Edition</li>
-                      <li>Product Code - Unique code for the title</li>
-                    </ul>
-                  </li>
-                  <li>To specify a page number to be launched, use the "page" query parameter in the eReader URL</li>
-                  <li>
-                    For example, to launch the page 5:
-                    <ul>
-                      <li><i>https://inlreader.comprodls.com/demo/student-edition/interkulturel_1_vtext?<b>page=5</b></i></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="accordianContent" id="eReaderRef">
-              <h2>Embedding the eReader in Your Application</h2>
-              <div class="description">
-                <ul>
-                  <li>Create an iframe: Set the <i>src</i> attribute of the iframe to <i>https://inlreader.comprodls.com/demo/student-edition/interkulturel_1_vtext</i></li>
-                  <li>Allow Fullscreen: Set the <i>allowfullscreen</i> attribute in the iframe to enable the eReader to go fullscreen when the user clicks on the fullscreen button.
-                  </li>
-                  <li>Embed Mode: Set the query parameter <i>embed</i> when launching the eReader in an Iframe.</li>
-                  <li>Specify Page Number: Set the query parameter <i>page</i> in the eReader URL to specify the page number to be launched.</li>
-                  <li>Sample Iframe: <i>&lt;iframe src="https://inlreader.comprodls.com/demo/student-edition/interkulturel_1_vtext?page=36&embed" allowfullscreen&gt;&lt;/iframe&gt;</i></li>
-                </ul>
-              </div>
-            </div>
-            <div class="accordianContent">
-              <h2>SSO & Entitlement</h2>
-              <div class="description">
-                <ul>
-                  <li>Currently the eReader is publicly available.</li>
-                  <li>The eReader will integrate with Inlingua’s Identity Provider (SSO) and Entitlement systems to ensure secure and personalized access for users.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="accordianContent">
-              <h2>Domain Mapping</h2>
-              <div class="description">
-                <ul>
-                  <li>Currently the eReader is mapped to <i>comprodls</i> domain.</li>
-                  <li>For seamless integration, domain mapping can be configured to align with your institution's domain, providing a consistent and branded user experience.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="accordianContent">
-              <h2>Browser & Device Support</h2>
-              <div class="description">
-                <ul>
-                  <li>The eReader supports a wide range of browsers and devices to ensure accessibility for all users. It is optimized for modern browsers and responsive to different screen sizes, including desktops, tablets, and smartphones.</li>
-                </ul>
-                <table>
-                  <tr>
-                    <th>OS Name</th>
-                    <th>Browser</th>
-                    <th>Support Level</th>
-                  </tr>
-                  <tr>
-                    <td>Windows 11/10</td>
-                    <td>Chrome</td>
-                    <td>Full</td>
-                  </tr>
-                  <tr>
-                    <td>Windows 11/10</td>
-                    <td>Edge</td>
-                    <td>Full</td>
-                  </tr>
-                  <tr>
-                    <td>Windows 11/10</td>
-                    <td>Fierfox</td>
-                    <td>Full</td>
-                  </tr>
-                  <tr>
-                    <td>macOS 14</td>
-                    <td>Safari</td>
-                    <td>Full</td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer>
-      © 2024 Compro Technologies. All rights reserved.
-    </footer>
+<head>
+  <!-- The first thing in any HTML file should be the charset -->
+  <meta charset="utf-8" />
+  <!-- Make site non indexed and non searchable for crawlers -->
+  <meta name="robots" content="index, follow" />
+  <!-- Make the page mobile compatible -->
+  <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1" />
+  <!-- favicon, title and description -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.png" />
+  <title>comproDLS Inlingua Pilot</title>
+  <meta name="description" content="comproDLS Inlingua Pilot" />
+  <!-- fonts file -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet" />
+  <!-- style sheet link-->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
 
-    <!-- includes js file -->
-    <script src="script/index.js"></script>
-  </body>
+<body>
+  <header>
+    <div class="headerDiv">
+      <div class="lineLogoBox">
+        <img class="waysideLogo" src="images/inlinguaLogo.svg" />
+        <img src="images/comproLogo.svg" />
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="mainContent">
+      <div class="welcomeBox">
+        <h1 class="welcomeTitle">comproDLS<sup>TM</sup> eReader</h1>
+        <p class="welcomeSubtitle">
+          <span>Inlingua Trial<span id="trialStartDate"></span></span>
+          Mobile-first, customizable eBook experience with instructor tools, enriched media, and comprehensive WYSIWYG
+          authoring.
+        </p>
+      </div>
+      <div class="trialExpiration">Trial version expires in <span id="trialRemainingDays">30</span> days</div>
+      <div class="grid-container">
+        <div>
+          <div id="div1" class="grid-item selectedDiv" tabindex="0">
+            <div class="containerBox">
+              <h2 class="containerTitle">eReader</h2>
+              <p class="containerContent">Our image-based adaptive rendering eReader optimized for multi-device delivery
+                and mobile-ready.</p>
+            </div>
+            <div class="inputsBox">
+              <div class="pageNoInputContainer">
+                <label for="pageNo" class="inputPageNoLabel">Page No. </label>
+                <input type="text" name="pageNo" id="pageNo" class="inputPageNo" />
+              </div>
+              <div class="switchBtnContainer">
+                <span>Launch in Iframe: </span>
+                <label class="switch">
+                  <input type="checkbox" id="iframeSwitch" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+            <div class="buttonsBox">
+              <button class="launchButton launchSelectedButton" onclick="flipbookClick()"
+                style="margin-right: 8px">Launch</button>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex">
+          <div id="div2" class="grid-item sectionContentBox" tabindex="0">
+            <div class="containerBox">
+              <h2 class="containerTitle">Builder</h2>
+              <p class="containerContent">Streamline eReader content delivery using our Builder tool set. Enabling
+                drag-and-drop production workflows for creation, updates, hotlinking and enrichment of eBooks.</p>
+            </div>
+            <button class="launchButton disabled" onclick="builderClick()">Launch</button>
+            <span class="disableLaunchBtnText">*Not Available in Trial Version*</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordianSection">
+      <div id="accordian1">
+        <div class="accordianTitle rotate" onclick="toggleAccordian(event)" aria-expanded="true">
+          <h1>Launching the eReader</h1>
+          <button>
+            <img src="images/downArrowIcon.svg" />
+          </button>
+        </div>
+        <div class="accordianContainer">
+          <div class="accordianContent">
+            <h2>Standard Launch</h2>
+            <div class="description">
+              <ul>
+                <li>Click "Launch" in the eReader card to open the eReader.</li>
+                <li>You can start from a specific page by entering the page number.</li>
+                <li>If no page number is provided, the eReader will open to the last page you visited.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordianContent">
+            <h2>Embedding the eReader in Your LMS</h2>
+            <div class="description">
+              <ul>
+                <li>Embed the eReader into your LMS using an iframe for a seamless integration.</li>
+                <li>Select the “Launch in Iframe” option and click "Launch" to experience the eReader within another
+                  application.</li>
+              </ul>
+              <p>For detailed technical information, see the documentation <a href="#eReaderRef"
+                  onclick="onClickAnchor(event)">below</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="accordian2">
+        <div class="accordianTitle rotate" onclick="toggleAccordian(event)" aria-expanded="true">
+          <h1>Key Highlights</h1>
+          <button aria-expanded="true">
+            <img src="images/downArrowIcon.svg" />
+          </button>
+        </div>
+        <div class="accordianContainer">
+          <div class="accordianContent">
+            <h2>Hotlinking Media & Activities</h2>
+            <div class="description">
+              <p>comproDLS<sup>TM</sup> eReader supports the following types of hotlinks:</p>
+              <ul>
+                <li><b>Activities:</b> Embed interactive activities directly within the eReader, enabling students to
+                  engage with activities in the context of the book material.</li>
+                <li><b>Media Integration:</b> Seamlessly play videos and audio within the eReader, complete with
+                  transcript support for enhanced accessibility.</li>
+                <li><b>Jump to Page:</b> Create direct links to specific pages, allowing quick navigation within the
+                  eReader.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordianContent">
+            <h2>Keyboard Support</h2>
+            <div class="description">
+              <ul>
+                <li>The eReader is designed for optimal keyboard accessibility.</li>
+                <li>Launch the keyboard help menu by pressing the ? key.</li>
+                <li>Easily navigate through the eReader application using the TAB key.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="accordian3">
+        <div class="accordianTitle rotate" onclick="toggleAccordian(event)" aria-expanded="true">
+          <h1>Technical Specifications</h1>
+          <button aria-expanded="true">
+            <img src="images/downArrowIcon.svg" />
+          </button>
+        </div>
+        <div class="accordianContainer">
+          <div class="accordianContent">
+            <h2>Launch Parameters</h2>
+            <div class="description">
+              <ul>
+                <li>
+                  The eReader url comprises of 4 parts <i>baseURL/{Program-Code}/{Product-Class}/{Product-Code}</i>
+                  <ul>
+                    <li>Base URL i.e. <i>https://inlreader-dev.comprodls.com</i></li>
+                    <li>Program Code - Unique code of the program</li>
+                    <li>Product Class - Specifies if the eReader is for Student Edition or Teacher Edition</li>
+                    <li>Product Code - Unique code for the title</li>
+                  </ul>
+                </li>
+                <li>To specify a page number to be launched, use the "page" query parameter in the eReader URL</li>
+                <li>
+                  For example, to launch the page 5:
+                  <ul>
+                    <li><i>https://inlreader-dev.comprodls.com/bridges1ea/student-edition/blc_a_vtext?<b>page=5</b></i>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordianContent" id="eReaderRef">
+            <h2>Embedding the eReader in Your Application</h2>
+            <div class="description">
+              <ul>
+                <li>Create an iframe: Set the <i>src</i> attribute of the iframe to
+                  <i>https://inlreader-dev.comprodls.com/bridges1ea/student-edition/blc_a_vtext</i>
+                </li>
+                <li>Allow Fullscreen: Set the <i>allowfullscreen</i> attribute in the iframe to enable the eReader to go
+                  fullscreen when the user clicks on the fullscreen button.
+                </li>
+                <li>Embed Mode: Set the query parameter <i>embed</i> when launching the eReader in an Iframe.</li>
+                <li>Specify Page Number: Set the query parameter <i>page</i> in the eReader URL to specify the page
+                  number to be launched.</li>
+                <li>Sample Iframe: <i>&lt;iframe
+                    src="https://inlreader-dev.comprodls.com/bridges1ea/student-edition/blc_a_vtext?page=2&embed"
+                    allowfullscreen&gt;&lt;/iframe&gt;</i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordianContent">
+            <h2>SSO & Entitlement</h2>
+            <div class="description">
+              <ul>
+                <li>Currently the eReader is publicly available.</li>
+                <li>The eReader will integrate with Inlingua’s Identity Provider (SSO) and Entitlement systems to ensure
+                  secure and personalized access for users.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordianContent">
+            <h2>Domain Mapping</h2>
+            <div class="description">
+              <ul>
+                <li>Currently the eReader is mapped to <i>comprodls</i> domain.</li>
+                <li>For seamless integration, domain mapping can be configured to align with your institution's domain,
+                  providing a consistent and branded user experience.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordianContent">
+            <h2>Browser & Device Support</h2>
+            <div class="description">
+              <ul>
+                <li>The eReader supports a wide range of browsers and devices to ensure accessibility for all users. It
+                  is optimized for modern browsers and responsive to different screen sizes, including desktops,
+                  tablets, and smartphones.</li>
+              </ul>
+              <table>
+                <tr>
+                  <th>OS Name</th>
+                  <th>Browser</th>
+                  <th>Support Level</th>
+                </tr>
+                <tr>
+                  <td>Windows 11/10</td>
+                  <td>Chrome</td>
+                  <td>Full</td>
+                </tr>
+                <tr>
+                  <td>Windows 11/10</td>
+                  <td>Edge</td>
+                  <td>Full</td>
+                </tr>
+                <tr>
+                  <td>Windows 11/10</td>
+                  <td>Fierfox</td>
+                  <td>Full</td>
+                </tr>
+                <tr>
+                  <td>macOS 14</td>
+                  <td>Safari</td>
+                  <td>Full</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    © 2024 Compro Technologies. All rights reserved.
+  </footer>
+
+  <!-- includes js file -->
+  <script src="script/index.js"></script>
+</body>
+
 </html>

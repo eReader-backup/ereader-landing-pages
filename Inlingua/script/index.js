@@ -4,17 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const currentTime = Date.now();
   const endTime = (START_DATE + FREE_TRIAL_DAYS * 24 * 60 * 60) * 1000;
-  const remainingDays = Math.max(0, Math.ceil((endTime - currentTime) / (1000 * 60 * 60 * 24)));
+  const remainingDays = Math.max(
+    0,
+    Math.ceil((endTime - currentTime) / (1000 * 60 * 60 * 24))
+  );
 
-  const trialRemainingDaysElement = document.querySelector("#trialRemainingDays");
+  const trialRemainingDaysElement = document.querySelector(
+    "#trialRemainingDays"
+  );
   trialRemainingDaysElement.innerText = remainingDays;
 
   const startDate = new Date(START_DATE * 1000);
-  const options = {year: 'numeric', month: 'short', day: 'numeric'};
+  const options = { year: "numeric", month: "short", day: "numeric" };
 
-  const formattedStartDate = startDate.toLocaleDateString('en-US', options);
+  const formattedStartDate = startDate.toLocaleDateString("en-US", options);
 
-  document.querySelector('#trialStartDate').innerText = formattedStartDate;
+  document.querySelector("#trialStartDate").innerText = formattedStartDate;
 });
 
 var inputField = document.getElementById("username");
@@ -22,7 +27,7 @@ var username = "";
 
 function flipbookClick() {
   const inputEle = document.querySelector("#pageNo");
-  const pageNo = inputEle.value || '36';
+  const pageNo = inputEle.value || "2";
   const switchEle = document.querySelector("#iframeSwitch");
   if (switchEle.checked) {
     //const iframeContainer = document.querySelector("#webbookIframe");
@@ -36,7 +41,7 @@ function flipbookClick() {
     let url = pageNo ? `eReader.html?page=${pageNo}` : `eReader.html`;
     window.open(url, "_blank");
   } else {
-    const readerUrl = `https://inlreader-dev.comprodls.com/demo/student-edition/interkulturel_1_vtext?page=${pageNo}`;
+    const readerUrl = `https://inlreader-dev.comprodls.com/bridges1ea/student-edition/blc_a_vtext?page=${pageNo}`;
     window.open(readerUrl, "_blank");
   }
 
@@ -49,7 +54,9 @@ function builderClick() {
 }
 
 let lastSelectedDiv = document.getElementById("div1");
-let lastSelectedButtons = [document.getElementById("div1").querySelector("button")];
+let lastSelectedButtons = [
+  document.getElementById("div1").querySelector("button"),
+];
 
 function handleDivClick(event) {
   if (lastSelectedDiv.id != event.currentTarget.id) {
@@ -98,13 +105,13 @@ function toggleAccordian(event) {
   }
 }
 
-function onClickAnchor(event){
+function onClickAnchor(event) {
   event.preventDefault();
   const targetId = event.currentTarget.getAttribute("href");
   const targetElement = document.querySelector(targetId);
-  var headerHeight = document.querySelector('header').offsetHeight;
+  var headerHeight = document.querySelector("header").offsetHeight;
   window.scrollTo({
     top: targetElement.offsetTop - (headerHeight + 20),
-    behavior: 'smooth'
+    behavior: "smooth",
   });
 }
