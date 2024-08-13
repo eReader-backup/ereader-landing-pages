@@ -464,7 +464,7 @@ input:checked + .slider:before {
   background-color: white;
 }
 
-#accordian1 > div, #accordian2 > div, #accordian3 > div{
+#accordian1 > div, #accordian2 > div, #accordian3 > div, #accordian4 > div{
   max-width: 1024px;
   margin: auto;
 }
