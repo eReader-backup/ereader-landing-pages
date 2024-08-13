@@ -295,10 +295,10 @@ a:visited {
 .slider:before {
   position: absolute;
   content: "";
-  height: 17px;
-  width: 17px;
-  left: 2px;
-  bottom: 1.5px;
+  height: 14px;
+  width: 14px;
+  left: 3.8px;
+  bottom: 3.2px;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
