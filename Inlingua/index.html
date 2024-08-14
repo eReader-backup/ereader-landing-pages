@@ -161,21 +161,18 @@
             <div class="description">
               <ul>
                 <li>
-                  The eReader url comprises of 4 parts <i>baseURL/{Program-Code}/{Product-Class}/{Product-Code}</i>
+                  The eReader URL is structured into four key components:<br> <i>baseURL/{Program-Code}/{Product-Class}/{Product-Code}</i>
                   <ul>
-                    <li>Base URL i.e. <i>https://inlreader-dev.comprodls.com</i></li>
-                    <li>Program Code - Unique code of the program</li>
-                    <li>Product Class - Specifies if the eReader is for Student Edition or Teacher Edition</li>
-                    <li>Product Code - Unique code for the title</li>
+                    <li><b>Base URL: </b><i>https://inlreader-dev.comprodls.com</i></li>
+                    <li><b>Program Code: </b>The unique identifier for the specific program.</li>
+                    <li><b>Product Class: </b>Specifies whether the eReader is for the <b>Student Edition</b> or <b>Teacher Edition</b></li>
+                    <li><b>Product Code: </b> The unique identifier for the specific title.</li>
                   </ul>
                 </li>
-                <li>To specify a page number to be launched, use the "page" query parameter in the eReader URL</li>
                 <li>
-                  For example, to launch the page 5:
-                  <ul>
-                    <li><i>https://inlreader-dev.comprodls.com/trial_english1step1/student-edition/trial_eng1_step1_se?<b>page=5</b></i>
-                    </li>
-                  </ul>
+                  <b>To specify a page number to be launched:</b><br>
+                  Use the <i>page</i> query parameter in the eReader URL. For example, to launch page 5: <br>
+                  <i>https://inlreader-dev.comprodls.com/demo/student-edition/english1_step1?<b>page=5</b></i>
                 </li>
               </ul>
             </div>
@@ -183,30 +180,59 @@
           <div class="accordianContent" id="eReaderRef">
             <h2>Embedding the eReader in Your Application</h2>
             <div class="description">
+              <p>To embed the eReader wihtin your application, follow these steps: </p>
               <ul>
-                <li>Create an iframe: Set the <i>src</i> attribute of the iframe to
-                  <i>https://inlreader-dev.comprodls.com/trial_english1step1/student-edition/trial_eng1_step1_se</i>
+                <li><b>Create an iframe:</b>
+                  <ul>
+                    <li>
+                      Set the <i>src</i> attribute of the iframe to the desired eReader URL, e.g.,<br>
+                      <i>https://inlreader-dev.comprodls.com/demo/student-edition/english1_step1</i>
+                    </li>
+                  </ul>
                 </li>
-                <li>Allow Fullscreen: Set the <i>allowfullscreen</i> attribute in the iframe to enable the eReader to go
+                <li><b>Enable Fullscreen:</b>
+                  <ul>
+                    <li>
+                      Add the <i>allowfullscreen</i> attribute to the iframe to allow users to switch to fullscreen mode.
+                    </li>
+                  </ul>
+                </li>
+                <li><b>Embed Mode:</b>
+                  <ul>
+                    <li>
+                      Use the <i>embed</i> query parameter in the eReader URL when launching within an iframe.
+                    </li>
+                  </ul>
+                </li>
+                <li><b>Specify Page Number:</b>
+                  <ul>
+                    <li>
+                      Use the page <i>query</i> parameter to start at a specific page.
+                    </li>
+                  </ul>
+                </li>
+                <!--<li>Allow Fullscreen: Set the <i>allowfullscreen</i> attribute in the iframe to enable the eReader to go
                   fullscreen when the user clicks on the fullscreen button.
                 </li>
                 <li>Embed Mode: Set the query parameter <i>embed</i> when launching the eReader in an Iframe.</li>
                 <li>Specify Page Number: Set the query parameter <i>page</i> in the eReader URL to specify the page
                   number to be launched.</li>
                 <li>Sample Iframe: <i>&lt;iframe
-                    src="https://inlreader-dev.comprodls.com/trial_english1step1/student-edition/trial_eng1_step1_se?page=2&embed"
-                    allowfullscreen&gt;&lt;/iframe&gt;</i></li>
+                    src="https://inlreader-dev.comprodls.com/demo/student-edition/english1_step1?page=2&embed"
+                    allowfullscreen&gt;&lt;/iframe&gt;</i></li>-->
               </ul>
+              <p>
+                <b>Sample iframe code: </b><br>
+                <i>&lt;iframe src="https://inlreader-dev.comprodls.com/demo/student-edition/english1_step1?page=2&embed" allowfullscreen&gt;&lt;/iframe&gt;</i>
+              </p>
             </div>
           </div>
           <div class="accordianContent">
             <h2>SSO & Entitlement</h2>
             <div class="description">
               <ul>
-                <li>Currently the eReader is publicly available.</li>
-                <li>The eReader will integrate with Inlingua’s Identity Provider (SSO) and Entitlement systems to ensure
-                  secure and personalized access for users.
-                </li>
+                <li><b>Current Availability: </b>The eReader is publicly accessible.</li>
+                <li><b>Upcoming Integration: </b>The eReader will integrate with Inlingua’s Identity Provider (SSO) and Entitlement systems to ensure secure and personalized user access.</li>
               </ul>
             </div>
           </div>
@@ -214,10 +240,8 @@
             <h2>Domain Mapping</h2>
             <div class="description">
               <ul>
-                <li>Currently the eReader is mapped to <i>comprodls</i> domain.</li>
-                <li>For seamless integration, domain mapping can be configured to align with your institution's domain,
-                  providing a consistent and branded user experience.
-                </li>
+                <li><b>Current Mapping: </b>The eReader is currently mapped to the <i>comprodls</i> domain.</li>
+                <li><b>Custom Integration: </b>Domain mapping can be configured to align with your institution's domain, offering a consistent and branded user experience.</li>
               </ul>
             </div>
           </div>
