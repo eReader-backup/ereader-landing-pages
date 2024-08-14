@@ -41,7 +41,7 @@ function flipbookClick() {
     let url = pageNo ? `eReader.html?page=${pageNo}` : `eReader.html`;
     window.open(url, "_blank");
   } else {
-    const readerUrl = `https://inlreader-dev.comprodls.com/bridges1ea/student-edition/blc_a_vtext?page=${pageNo}`;
+    const readerUrl = `https://inlreader-dev.comprodls.com/demo/student-edition/english1_step1?page=${pageNo}`;
     window.open(readerUrl, "_blank");
   }
 
