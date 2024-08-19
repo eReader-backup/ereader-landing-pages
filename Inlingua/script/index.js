@@ -41,7 +41,7 @@ function flipbookClick() {
     let url = pageNo ? `eReader.html?page=${pageNo}` : `eReader.html`;
     window.open(url, "_blank");
   } else {
-    const readerUrl = `https://inlingua-reader.comprodls.com/internal_qa/student-edition/qa_eng1_step1_se?page=${pageNo}`;
+    const readerUrl = `https://inlingua-reader.comprodls.com/trial_english1step1/student-edition/trial_eng1_step1_se?page=${pageNo}`;
     window.open(readerUrl, "_blank");
   }
 
