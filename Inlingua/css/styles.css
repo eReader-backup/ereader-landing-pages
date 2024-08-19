@@ -24,7 +24,7 @@
 }
 
 body {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   background: #faf8f7;
   color: rgb(17, 24, 39);
 }
@@ -128,7 +128,7 @@ header {
 }
 
 .welcomeTitle {
-  font-family: 'Oswald', Arial, sans-serif;
+  font-family: "Oswald", Arial, sans-serif;
   font-size: 62px;
   line-height: 1.25;
   font-weight: 800;
@@ -145,7 +145,7 @@ header {
   flex-direction: column;
 }
 
-.welcomeSubtitle span{
+.welcomeSubtitle span {
   font-size: 24px;
   color: #666666;
   margin-bottom: 16px;
@@ -157,7 +157,7 @@ header {
   padding-left: 12px;
 }
 
-.trialExpiration{
+.trialExpiration {
   margin-top: 24px;
   text-align: center;
   color: rgb(107, 114, 128);
@@ -223,7 +223,7 @@ section {
 }
 
 .directLinkBox {
-  margin:  16px 16px 0px 16px;
+  margin: 16px 16px 0px 16px;
   font-size: 11px;
 }
 
@@ -240,16 +240,16 @@ a:visited {
   word-break: break-all;
 }
 
-.inputsBox{
+.inputsBox {
   margin-top: 24px;
 }
 
-.pageNoInputContainer{
+.pageNoInputContainer {
   display: flex;
   align-items: center;
 }
 
-.inputPageNo{
+.inputPageNo {
   padding: 4px;
   margin-left: 8px;
   height: 24px;
@@ -259,11 +259,11 @@ a:visited {
   outline: none;
 }
 
-.inputPageNo:focus{
+.inputPageNo:focus {
   border: 1px solid #b45c3d;
 }
 
-.switchBtnContainer{
+.switchBtnContainer {
   margin-top: 16px;
 }
 
@@ -274,7 +274,7 @@ a:visited {
   height: 20px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -288,8 +288,8 @@ a:visited {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -300,8 +300,8 @@ a:visited {
   left: 3.8px;
   bottom: 3.2px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -358,7 +358,8 @@ input:checked + .slider:before {
   box-shadow: none;
 }
 
-.launchButton.disabled, .launchSelectedButton.disabled{
+.launchButton.disabled,
+.launchSelectedButton.disabled {
   cursor: default;
   pointer-events: none;
   background-color: rgb(202, 201, 201);
@@ -366,10 +367,11 @@ input:checked + .slider:before {
   color: white;
 }
 
-.disableLaunchBtnText{
+.disableLaunchBtnText {
   font-size: 12px;
   margin: 0 auto;
   color: grey;
+  font-style: italic;
 }
 
 .rightArrow {
@@ -383,7 +385,7 @@ input:checked + .slider:before {
   margin-top: 16px;
 }
 
-.backdrop{
+.backdrop {
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -393,11 +395,11 @@ input:checked + .slider:before {
   display: none;
 }
 
-.backdrop.visible{
+.backdrop.visible {
   display: block;
 }
 
-#iframeContainer{
+#iframeContainer {
   width: calc(100% - 64px);
   height: calc(100% - 64px);
   background-color: #ffffff;
@@ -407,7 +409,7 @@ input:checked + .slider:before {
   left: 32px;
 }
 
-.closeIcon{
+.closeIcon {
   position: absolute;
   top: 4px;
   right: 8px;
@@ -418,18 +420,18 @@ input:checked + .slider:before {
   align-items: center;
 }
 
-.closeIcon:hover{
+.closeIcon:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
 }
 
-.closeIcon img{
+.closeIcon img {
   width: 16px;
   height: 16px;
 }
 
-#iframeContainer iframe{
+#iframeContainer iframe {
   width: 100%;
   height: 100%;
   border-radius: 4px;
@@ -456,30 +458,33 @@ input:checked + .slider:before {
 }
 
 /* ======================== accordian section css ======================= */
-.accordianSection > div{
+.accordianSection > div {
   padding: 40px 60px;
 }
 
-.accordianSection > div:nth-child(odd){
+.accordianSection > div:nth-child(odd) {
   background-color: white;
 }
 
-#accordian1 > div, #accordian2 > div, #accordian3 > div, #accordian4 > div{
+#accordian1 > div,
+#accordian2 > div,
+#accordian3 > div,
+#accordian4 > div {
   max-width: 1024px;
   margin: auto;
 }
-.accordianTitle{
+.accordianTitle {
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
 }
 
-.accordianTitle h1{
+.accordianTitle h1 {
   font-size: 30px;
 }
 
-.accordianTitle button{
+.accordianTitle button {
   background: none;
   border: none;
   cursor: pointer;
@@ -492,53 +497,52 @@ input:checked + .slider:before {
   transition: transform 0.5s;
 }
 
-.accordianTitle.rotate button{
+.accordianTitle.rotate button {
   transform: rotate(180deg);
 }
 
-.accordianTitle button:hover{
-  background-color: lightgray
+.accordianTitle button:hover {
+  background-color: lightgray;
 }
 
-.accordianContainer{
+.accordianContainer {
   overflow: hidden;
   max-height: 2000px;
   transition: max-height 0.5s ease-out;
 }
 
-.accordianContainer.hide{
+.accordianContainer.hide {
   max-height: 0;
 }
 
-.accordianContent{
+.accordianContent {
   margin-top: 40px;
   margin-bottom: 32px;
 }
 
-.accordianContent:last-child{
+.accordianContent:last-child {
   margin-bottom: 0;
 }
 
-.accordianContent h2{
+.accordianContent h2 {
   margin-bottom: 8px;
 }
 
-.accordianContent .description{
+.accordianContent .description {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;
-
 }
 
-.accordianContent .description p sup{
+.accordianContent .description p sup {
   font-size: 10px;
 }
 
-.accordianContent .description ul{
+.accordianContent .description ul {
   margin-left: 40px;
 }
 
-.accordianContent .description ul li{
+.accordianContent .description ul li {
   padding-left: 16px;
   margin: 16px 0;
 }
@@ -549,7 +553,8 @@ input:checked + .slider:before {
   width: 50%;
 }
 
-.accordianContent .description table th, .accordianContent .description table td {
+.accordianContent .description table th,
+.accordianContent .description table td {
   border-right: 1px solid #dedede;
   border-bottom: 1px solid #dedede;
   text-align: left;
@@ -557,35 +562,35 @@ input:checked + .slider:before {
   width: 33%;
 }
 
-.accordianContent .description table th{
+.accordianContent .description table th {
   border-top: 6px solid #b45c3d;
   background-color: #f7eeeb;
   font-weight: normal;
 }
 
-.accordianContent .description table th:first-child{
+.accordianContent .description table th:first-child {
   border-top-left-radius: 8px;
   border-left: 1px solid #dedede;
 }
 
-.accordianContent .description table th:last-child{
+.accordianContent .description table th:last-child {
   border-top-right-radius: 8px;
 }
 
-.accordianContent .description table td:first-child{
+.accordianContent .description table td:first-child {
   border-left: 1px solid #dedede;
 }
 
-.accordianContent .description table tr:last-child td:first-child{
+.accordianContent .description table tr:last-child td:first-child {
   border-bottom-left-radius: 8px;
 }
 
-.accordianContent .description table tr:last-child td:last-child{
+.accordianContent .description table tr:last-child td:last-child {
   border-bottom-right-radius: 8px;
 }
 
 /* ======================== footer css ======================= */
-footer{
+footer {
   background-color: #faf8f7;
   height: 80px;
   display: flex;
