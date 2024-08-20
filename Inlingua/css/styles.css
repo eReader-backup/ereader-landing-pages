@@ -326,14 +326,14 @@ input:checked + .slider:before {
 }
 
 .buttonsBox {
-  margin-top: 16px;
+  margin-top: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  a{
-    margin-bottom: 8px;
+  a:first-child{
+    margin-bottom: 16px;
   }
 }
 
@@ -599,7 +599,7 @@ input:checked + .slider:before {
 
 /* ======================== footer css ======================= */
 footer {
-  background-color: #faf8f7;
+  background-color: #ffffff;
   height: 80px;
   display: flex;
   align-items: center;
