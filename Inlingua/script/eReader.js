@@ -1,7 +1,8 @@
 window.onload = function () {
   const urlParams = new URLSearchParams(window.location.search);
   const pageNo = urlParams.get("page");
-  const url = `https://inlingua-reader.comprodls.com/trial_english1step1/student-edition/trial_eng1_step1_se?page=${pageNo}&embed`;
+  const productUrl = urlParams.get('url');
+  const url = `${productUrl}?page=${pageNo}&embed`;
   const iframe = document.createElement("iframe");
   iframe.src = url;
   iframe.allowFullscreen = true;

@@ -326,7 +326,15 @@ input:checked + .slider:before {
 }
 
 .buttonsBox {
-  margin: auto;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  a{
+    margin-bottom: 8px;
+  }
 }
 
 .launchButton {

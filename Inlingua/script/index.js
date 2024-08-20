@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
 var inputField = document.getElementById("username");
 var username = "";
 
-function flipbookClick() {
+function flipbookClick(productUrl) {
   const inputEle = document.querySelector("#pageNo");
-  const pageNo = inputEle.value || "2";
+  const pageNo = inputEle.value;
   const switchEle = document.querySelector("#iframeSwitch");
   if (switchEle.checked) {
     //const iframeContainer = document.querySelector("#webbookIframe");
@@ -38,10 +38,11 @@ function flipbookClick() {
     //iframe.src = url;
 
     //iframeWrapper.appendChild(iframe);
-    let url = pageNo ? `eReader.html?page=${pageNo}` : `eReader.html`;
+    let baseUrl = `eReader.html?url=${productUrl}`;
+    let url = pageNo ? `${baseUrl}&&page=${pageNo}` : baseUrl;
     window.open(url, "_blank");
   } else {
-    const readerUrl = `https://inlingua-reader.comprodls.com/trial_english1step1/student-edition/trial_eng1_step1_se?page=${pageNo}`;
+    const readerUrl = `${productUrl}${pageNo && `?page=${pageNo}`}`;
     window.open(readerUrl, "_blank");
   }
 
