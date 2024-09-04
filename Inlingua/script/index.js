@@ -50,7 +50,7 @@ function flipbookClick(productUrl) {
 }
 
 function builderClick() {
-  let url = "https://vhl-builder.comprodls.com/";
+  let url = "https://inlingua-builder.comprodls.com/";
   window.open(url, "_blank");
 }
 
