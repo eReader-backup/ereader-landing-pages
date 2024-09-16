@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const START_DATE = 1724242028;
-  const FREE_TRIAL_DAYS = 37;
+  const FREE_TRIAL_DAYS = 36;
 
   const currentTime = Date.now();
   const endTime = (START_DATE + FREE_TRIAL_DAYS * 24 * 60 * 60) * 1000;
